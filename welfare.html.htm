@@ -1,0 +1,568 @@
+
+<html class="h-full" lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OWARI SEIKI (THAILAND) HR-Dx</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Noto Sans & Noto Sans Thai -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Forms and Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "inverse-on-surface": "#eaf1ff",
+            "secondary-container": "#7db6ff",
+            "on-error": "#ffffff",
+            "primary-container": "#0f2942",
+            "inverse-surface": "#213145",
+            "on-background": "#0b1c30",
+            "inverse-primary": "#b0c9e8",
+            "surface-container-low": "#eff4ff",
+            "on-tertiary-container": "#21a173",
+            "on-surface": "#0b1c30",
+            "surface-container-highest": "#d3e4fe",
+            "surface": "#f8f9ff",
+            "on-primary-fixed": "#011d35",
+            "secondary-fixed": "#d3e4ff",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#005137",
+            "on-surface-variant": "#43474d",
+            "on-error-container": "#93000a",
+            "on-primary-container": "#7991af",
+            "surface-dim": "#cbdbf5",
+            "surface-variant": "#d3e4fe",
+            "secondary-fixed-dim": "#a2c9ff",
+            "surface-tint": "#49607c",
+            "on-secondary-container": "#00477f",
+            "outline-variant": "#c3c6ce",
+            "on-secondary-fixed": "#001c38",
+            "outline": "#74777e",
+            "on-tertiary-fixed": "#002114",
+            "tertiary-fixed": "#85f8c4",
+            "tertiary-fixed-dim": "#68dba9",
+            "background": "#f8f9ff",
+            "on-secondary": "#ffffff",
+            "surface-container": "#e5eeff",
+            "on-primary-fixed-variant": "#314863",
+            "surface-container-high": "#dce9ff",
+            "tertiary": "#00170d",
+            "on-primary": "#ffffff",
+            "secondary": "#1960a3",
+            "error": "#ba1a1a",
+            "tertiary-container": "#002e1d",
+            "on-tertiary": "#ffffff",
+            "primary-fixed": "#d1e4ff",
+            "primary-fixed-dim": "#b0c9e8",
+            "primary": "#001428",
+            "error-container": "#ffdad6",
+            "on-secondary-fixed-variant": "#004881",
+            "surface-bright": "#f8f9ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "gutter": "1.5rem",
+            "margin-mobile": "1rem",
+            "gutter-mobile": "0.75rem",
+            "margin": "2rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "label-md": ["Noto Sans", "Noto Sans Thai"],
+            "title-md": ["Noto Sans", "Noto Sans Thai"],
+            "headline-lg": ["Noto Sans", "Noto Sans Thai"],
+            "label-lg": ["Noto Sans", "Noto Sans Thai"],
+            "title-lg": ["Noto Sans", "Noto Sans Thai"],
+            "headline-lg-mobile": ["Noto Sans", "Noto Sans Thai"],
+            "title-sm": ["Noto Sans", "Noto Sans Thai"],
+            "body-lg": ["Noto Sans", "Noto Sans Thai"],
+            "label-sm": ["Noto Sans", "Noto Sans Thai"],
+            "body-md": ["Noto Sans", "Noto Sans Thai"],
+            "body-sm": ["Noto Sans", "Noto Sans Thai"],
+            "headline-xl": ["Noto Sans", "Noto Sans Thai"],
+            "headline-xl-mobile": ["Noto Sans", "Noto Sans Thai"],
+            "headline-md": ["Noto Sans", "Noto Sans Thai"]
+          },
+          "fontSize": {
+            "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "title-md": ["1rem", { "lineHeight": "1.5rem", "fontWeight": "600" }],
+            "headline-lg": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-lg": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "500" }],
+            "title-lg": ["1.125rem", { "lineHeight": "1.625rem", "fontWeight": "600" }],
+            "headline-lg-mobile": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "title-sm": ["0.875rem", { "lineHeight": "1.25rem", "fontWeight": "600" }],
+            "body-lg": ["1rem", { "lineHeight": "1.625rem", "fontWeight": "400" }],
+            "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "body-md": ["0.875rem", { "lineHeight": "1.375rem", "fontWeight": "400" }],
+            "body-sm": ["0.75rem", { "lineHeight": "1.125rem", "fontWeight": "400" }],
+            "headline-xl": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-xl-mobile": ["1.625rem", { "lineHeight": "2.125rem", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-md": ["1.25rem", { "lineHeight": "1.75rem", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Noto Sans Thai', 'Noto Sans', sans-serif;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-fill {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col">
+<!-- TOP APP BAR (Shared Component Execution) -->
+<header class="w-full h-16 flex items-center justify-between px-space-md lg:px-space-xl z-40 border-b border-outline-variant bg-surface-container-lowest sticky top-0 shadow-sm">
+<!-- Left Cluster: Brand & Plant Identification -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-3">
+<img alt="Owari Seiki Corporate Precision Automotive Emblem" class="h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpGhLDbBJhMLIilISs7v0c174hq_UKGpzoZ-1IJGJo7lLtEt9EGXbmdGEDdXDeILcKW-2Dj1g_rKusKlUmTKhhZuT1SFMTyECzqEnT6cfGrlNPLmuBcVheugEzbdD09gwde05YgXB8N03U50KcuVEnPIXli0A8BHJ_uOewABKpJ9c2ZiiJJjxnpFvX2qVQSbfJedW5iy-q3Ra5Dsxgs4zpeehhv3cGL7ZQXWCXBMiB9pdOeq0NsRJGBLuqzPBkfWTvTg4"/>
+<div class="hidden sm:flex flex-col">
+<span class="text-title-md font-title-md font-bold text-primary tracking-tight leading-none">OWARI SEIKI (THAILAND) HR-Dx</span>
+<span class="text-label-sm font-label-sm text-outline mt-0.5">ระบบบริการพนักงานอัตโนมัติ (Employee Self-Service)</span>
+</div>
+</div>
+<!-- Top Navigation Links (Desktop) -->
+<nav class="hidden xl:flex items-center gap-6 ml-6 border-l border-outline-variant pl-6">
+<a class="text-secondary border-b-2 border-secondary font-title-sm pb-1 flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[18px]">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary font-label-lg transition-colors duration-150" href="#">Claims</a>
+<a class="text-on-surface-variant hover:text-primary font-label-lg transition-colors duration-150" href="#">Work Calendar</a>
+<a class="text-on-surface-variant hover:text-primary font-label-lg transition-colors duration-150" href="#">Support</a>
+</nav>
+</div>
+<!-- Center Search Bar (on_left style layout adaptation) -->
+<div class="hidden md:flex items-center flex-1 max-w-xs mx-4">
+<div class="relative w-full">
+<span class="absolute inset-y-0 left-0 flex items-center pl-2.5 pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[18px]">search</span>
+</span>
+<input class="w-full pl-9 pr-3 py-1.5 text-body-sm font-body-sm bg-surface-container-low border border-outline-variant rounded-lg text-on-surface placeholder:text-outline focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-all" placeholder="ค้นหาคู่มือ, สิทธิการเบิก, ระเบียบบริษัท..." type="text"/>
+</div>
+</div>
+<!-- Right Cluster: Primary Actions & User Status -->
+<div class="flex items-center gap-3">
+<!-- Quick Trailing Claim Button -->
+<button class="hidden lg:flex items-center gap-1.5 px-3 py-1.5 bg-primary text-on-primary rounded-lg text-label-md font-label-md hover:bg-primary-container transition-all active:scale-[0.98] shadow-sm">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>ยื่นคำร้องเบิกสวัสดิการ</span>
+</button>
+<!-- Trailing Action Icons -->
+<div class="flex items-center gap-1 text-on-surface-variant border-x border-outline-variant px-2">
+<button class="p-1.5 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface-variant relative" title="การแจ้งเตือน">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full ring-2 ring-surface-container-lowest"></span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface-variant" title="เปลี่ยนภาษา (TH/JP/EN)">
+<span class="material-symbols-outlined text-[20px]">translate</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container-low transition-colors text-on-surface-variant" title="ช่วยเหลือ">
+<span class="material-symbols-outlined text-[20px]">help</span>
+</button>
+</div>
+<!-- User Mini Profile -->
+<div class="flex items-center gap-2 pl-1 cursor-pointer">
+<div class="hidden lg:flex flex-col text-left">
+<span class="text-title-sm font-title-sm text-primary leading-tight">สวัสดี! คุณณเดช</span>
+<span class="text-label-sm font-label-sm text-outline">OST-07-00001</span>
+</div>
+</div>
+</div>
+</header>
+<!-- BODY CONTENT AREA (SIDEBAR + MAIN CANVAS) -->
+<div class="flex-1 flex overflow-hidden">
+<!-- SIDEBAR NAVIGATION (Shared Component Execution: Active Tab: ข้อมูลส่วนตัว / Profile) -->
+<aside class="w-64 min-w-[16rem] hidden md:flex flex-col justify-between p-space-md border-r border-outline-variant bg-surface-container-lowest flex-shrink-0 overflow-y-auto">
+<div class="space-y-4">
+<!-- Plant Entity Subtitle Card -->
+<div class="p-3 bg-surface-container-low rounded-lg border border-outline-variant/60 flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-surface-bright flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
+</div>
+<div class="overflow-hidden">
+<p class="text-title-sm font-title-sm text-primary truncate">OST HR DX</p>
+<p class="text-label-sm font-label-sm text-outline truncate">Head Office - Rayong</p>
+</div>
+</div>
+<!-- Section Label -->
+<p class="px-2 text-label-sm font-label-sm font-semibold uppercase tracking-wider text-outline">
+          เมนูระบบพนักงาน (Employee Menu)
+        </p>
+<!-- Navigation Tabs -->
+        <nav class="space-y-1">
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-surface-container-low text-secondary border-l-4 border-secondary font-title-sm transition-all duration-150 active:scale-[0.99]" href="/HTML%Code%OST%HR%DX/index.html.htm">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+            <span class="truncate">Dashboard (ภาพรวมระบบ)</span>
+          </a>
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="/HTML%Code%OST%HR%DX/personal.html.htm">
+            <span class="material-symbols-outlined text-[20px]">badge</span>
+            <span class="truncate">ข้อมูลส่วนตัว (Profile)</span>
+          </a>
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="/HTML%Code%OST%HR%DX/ot-request.html.htm">
+            <span class="material-symbols-outlined text-[20px]">more_time</span>
+            <span class="truncate">ขออนุมัติทำงานล่วงเวลา (OT Request)</span>
+          </a>
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="/HTML%Code%OST%HR%DX/welfare.html.htm">
+            <span class="material-symbols-outlined text-[20px]">health_and_safety</span>
+            <span class="truncate">สิทธิสวัสดิการ (Benefits)</span>
+          </a>
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="/HTML%Code%OST%HR%DX/request.html.htm">
+            <span class="material-symbols-outlined text-[20px]">post_add</span>
+            <span class="truncate">ยื่นคำร้อง (Claim Request)</span>
+          </a>
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="/HTML%Code%OST%HR%DX/claim-history.html.htm">
+            <span class="material-symbols-outlined text-[20px]">receipt_long</span>
+            <span class="truncate">ประวัติการเบิกจ่าย (Claim History)</span>
+          </a>
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="#">
+            <span class="material-symbols-outlined text-[20px]">manage_accounts</span>
+            <span class="truncate">จัดการข้อมูลพนักงาน (HR Workforce)</span>
+          </a>
+                    <!-- 6. แบบฟอร์มต่างๆ (HR Form) -->
+      <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" 
+         href="/HTML%Code%OST%HR%DX/online_viewer_net%Claim%History.htm">
+        <span class="material-symbols-outlined text-[20px]">description</span>
+        <span class="truncate">แบบฟอร์มต่างๆ (HR Form)</span>
+      </a>
+
+      <!-- 7. จองห้องประชุม (Meeting room booking) -->
+      <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" 
+         href="/HTML%Code%OST%HR%DX/online_viewer_net%Claim%History.htm">
+        <span class="material-symbols-outlined text-[20px]">meeting_room</span>
+        <span class="truncate">จองห้องประชุม (Meeting Room)</span>
+      </a>
+
+      <!-- 8. ขอใช้รถยนต์บริษัท (Car Booking) -->
+      <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" 
+         href="/HTML%Code%OST%HR%DX/online_viewer_net%Claim%History.htm">
+        <span class="material-symbols-outlined text-[20px]">directions_car</span>
+        <span class="truncate">ขอใช้รถยนต์บริษัท (Car Booking)</span>
+      </a>
+
+      <!-- 9. ขอหนังสือรับรอง (Certificate Request) -->
+      <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" 
+         href="/HTML%Code%OST%HR%DX/online_viewer_net%Claim%History.htm">
+        <span class="material-symbols-outlined text-[20px]">verified</span>
+        <span class="truncate">ขอหนังสือรับรอง (Certificate Request)</span>
+      </a>
+
+      <!-- 11. แจ้งซ่อม/สร้าง (Maintenance Request) -->
+      <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" 
+         href="/HTML%Code%OST%HR%DX/online_viewer_net%Claim%History.htm">
+        <span class="material-symbols-outlined text-[20px]">home_repair_service</span>
+        <span class="truncate">แจ้งซ่อม/สร้าง (Maintenance Request)</span>
+      </a>
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="#">
+            <span class="material-symbols-outlined text-[20px]">approval</span>
+            <span class="truncate">อนุมัติสวัสดิการ (Benefit Approvals)</span>
+          </a>
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="#">
+            <span class="material-symbols-outlined text-[20px]">analytics</span>
+            <span class="truncate">รายงานสรุป (Executive Reports)</span>
+          </a>
+        </nav>
+
+        <!-- CTA Download Forms -->
+        <div class="pt-2">
+          <button class="w-full flex items-center justify-center gap-2 py-2 px-3 border border-secondary text-secondary rounded-lg font-label-md hover:bg-surface-container-low transition-colors duration-150">
+            <span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+            <span class="">ดาวน์โหลดเอกสาร (Forms)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Footer Action Tabs -->
+      <div class="pt-4 border-t border-outline-variant/60 space-y-1">
+        <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-colors duration-150" href="#">
+          <span class="material-symbols-outlined text-[20px]">settings</span>
+          <span class="">การตั้งค่าระบบ (Settings)</span>
+        </a>
+        <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-error hover:bg-error-container/40 font-label-md transition-colors duration-150" href="#">
+          <span class="material-symbols-outlined text-[20px]">logout</span>
+          <span class="">ออกจากระบบ (Sign Out)</span>
+        </a>
+      </div>
+    </aside>
+<!-- MAIN WORKSPACE CANVAS -->
+<main class="flex-1 overflow-y-auto bg-background p-space-md lg:p-space-lg">
+<div class="max-w-[1520px] mx-auto space-y-6">
+<!-- HERO IDENTITY BANNER: Bento Precision Header -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden relative">
+<!-- Top Accent Line (Corporate Japanese Precision Style) -->
+<div class="h-1.5 w-full bg-gradient-to-r from-primary via-secondary to-secondary-container"></div>
+<div class="p-5 lg:p-6 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+<!-- Left Info Cluster -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-5">
+<!-- Employee Avatar with Badge Ring -->
+<div class="relative">
+<img class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl object-cover border-2 border-surface-container-high shadow-xs" data-alt="High-resolution professional ID portrait photo of a senior Thai automotive technician wearing dark blue Japanese corporate manufacturing uniform with high-visibility plant tag in Rayong facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhupkviauAxHS4kac5b8sNhFtY9yQTyn-NmTKpSH2lf4s1FbwChWw8N5YS-kqOWEOnsmFtOYg7jBMVhg3NhMEm051n2NYvciElk3YdDVj1gkC3qNWCGAjL6nMY-FEstiobda9rUyP7lcg93VI1iaWQZfEWnLMq-RamzBhJaaCx69EWg56OBQpd6XDJ4uwyTpY3Vnp2QCmpM6pwMZ-Gp8S35akMnmxFQOGxp-bZGvT2wVLb9uh__eXlCtQHPsvzTTrWXHBzj_ucNv1cqW8">
+<span class="absolute -bottom-1 -right-1 bg-surface-container-lowest px-1.5 py-0.5 rounded border border-outline-variant text-[10px] font-bold text-secondary flex items-center shadow-xs">
+<span class="material-symbols-outlined text-[12px] text-tertiary-fixed-dim mr-0.5">verified</span>
+                  07-00001
+                </span>
+</div>
+<!-- Employee Details Breakdown -->
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<h1 class="text-headline-lg font-headline-lg text-primary tracking-tight">นายณรงค์เดช  สิริกา</h1>
+<span class="text-body-md font-body-md text-outline">(Mr. Narongdech  Sirika)</span>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-emerald-50 text-emerald-800 border border-emerald-200">
+                    พนักงานประจำ (Full-Time Permanent)
+                  </span>
+</div>
+<p class="text-title-sm font-title-sm text-secondary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">engineering</span>
+<span>PC Supervisor (หัวหน้างานระดับสูงสุด)</span>
+</p>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-label-md font-label-md text-on-surface-variant pt-1">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">badge</span>
+                    รหัสพนักงาน: <span class="font-semibold text-primary">07-00001</span>
+</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">domain</span>
+                    ฝ่าย: <span class="font-semibold text-primary">Production Control  &amp; Packing</span>
+</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">calendar_today</span>
+                    เริ่มงาน: <span class="font-semibold text-primary">16 เมษายน 2007</span> (อายุงาน 19 ปี 9 เดือน)
+                  </span>
+</div>
+</div>
+</div>
+<!-- Right Plant 2 Backdrop Card Preview -->
+<div class="w-full lg:w-80 flex-shrink-0 bg-surface-container-low rounded-lg p-3 border border-outline-variant flex items-center gap-3">
+<img alt="Owari Seiki Rayong Plant 2 Manufacturing Factory Entrance" class="w-20 h-16 rounded object-cover border border-outline-variant flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_jFqjq2gPK6UyUgZDgpt7JTC-xbgQC5h7-Io4o-IquHunSdKL7BJ_fAHbmx5-w5SxIn0LmTanWtEyNE4gsWll3QPqO-P8SDXGQDeOSypK_vvOie0vLYL3By9T1qZ8yEWTrMUHlI7zxybqCr5_bNc-gSU8lBmVcNBEUii_HnsmxyhGU346E6o_hqSVFum1KZYIFpH9bheMWZrdAD2rQ8ErW3_CjUnLmeZ4En6Fitp5KFSnUOg0AodXeSeh3aH5Azk9trI"/>
+<div class="overflow-hidden">
+<span class="inline-block px-1.5 py-0.2 bg-secondary text-on-primary text-[10px] font-bold rounded">Rayong Plant</span>
+<p class="text-title-sm font-title-sm text-primary leading-tight mt-1 truncate">นิคมอุตสาหกรรมอีสเทิร์นซีบอร์ด ระยอง</p>
+<p class="text-label-sm font-label-sm text-outline mt-0.5">Eastern Seaboard Rayong Industrial Estate</p>
+</div>
+</div>
+</div>
+<!-- Bottom Metric Quick Strips (Safety & Operational KPIs) -->
+<div class="grid grid-cols-2 md:grid-cols-4 border-t border-outline-variant bg-surface-container-low/50 divide-x divide-outline-variant">
+<div class="p-3 px-5 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[24px]">schedule</span>
+<div>
+<p class="text-label-sm font-label-sm uppercase text-outline">สถานะกะปัจจุบัน</p>
+<p class="text-title-sm font-title-sm font-bold text-primary">Day Shift (08:00 - 17:00)</p>
+</div>
+</div>
+<div class="p-3 px-5 flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-700 text-[24px]">verified_user</span>
+<div>
+<p class="text-label-sm font-label-sm uppercase text-outline">สถิติความปลอดภัยไร้อุบัติเหตุ</p>
+<p class="text-title-sm font-title-sm font-bold text-primary">1,420 วันต่อเนื่อง (Zero Accident)</p>
+</div>
+</div>
+<div class="p-3 px-5 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[24px]">alarm_on</span>
+<div>
+<p class="text-label-sm font-label-sm uppercase text-outline">การตรงต่อเวลาเดือนนี้</p>
+<p class="text-title-sm font-title-sm font-bold text-primary">100% (ตรงเวลาทุกกะงาน)</p>
+</div>
+</div>
+<div class="p-3 px-5 flex items-center gap-3">
+<span class="material-symbols-outlined text-amber-700 text-[24px]">star</span>
+<div>
+<p class="text-label-sm font-label-sm uppercase text-outline">ระดับความสามารถ Kaizen</p>
+<p class="text-title-sm font-title-sm font-bold text-primary">Level 4 (Certified Coach)</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 360-DEGREE SECTION 1: สิทธิและวงเงินสวัสดิการ (Benefit Entitlements & Remaining Quota) -->
+<section class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<h2 class="text-title-lg font-title-lg text-primary">สิทธิและสวัสดิการ (Benefit Entitlements &amp; Remaining Quota)</h2>
+<span class="text-label-md font-label-md text-outline">ประจำปีงบประมาณ 2570</span>
+</div>
+<a class="text-secondary hover:underline text-label-md font-label-md flex items-center gap-0.5" href="#">
+<span>ดูรายละเอียดเงื่อนไขทั้งหมด</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Benefit 1: ค่ารักษาพยาบาล (OPD/IPD) -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-4 shadow-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div class="flex items-start justify-between">
+<div>
+<span class="text-label-sm font-label-sm uppercase text-outline">ค่ารักษาพยาบาลสำหรับครอบครัว</span>
+<h3 class="text-headline-lg font-headline-lg text-primary mt-1 tabular-nums">฿4,000</h3>
+</div>
+<span class="p-2 rounded-lg bg-surface-container-low text-secondary">
+<span class="material-symbols-outlined text-[20px]">medical_services</span>
+</span>
+</div>
+<div class="mt-3">
+<div class="flex justify-between text-label-sm font-label-sm text-outline mb-1">
+<span>ใช้วงเงินไป: ฿0</span>
+<span class="font-semibold text-secondary">คงเหลือ 100%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 100%"></div>
+</div>
+<p class="text-label-sm font-label-sm text-outline mt-2">สิทธิเต็ม: ฿4,000 ต่อปีงบประมาณ</p>
+</div>
+
+</div>
+<!-- Benefit 2: ทันตกรรม (Dental Care) -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-4 shadow-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-emerald-600"></div>
+<div class="flex items-start justify-between">
+<div>
+<span class="text-label-sm font-label-sm uppercase text-outline">ค่าทันตกรรม (Dental Care)</span>
+<h3 class="text-headline-lg font-headline-lg text-primary mt-1 tabular-nums">฿2,000</h3>
+</div>
+<span class="p-2 rounded-lg bg-emerald-50 text-emerald-700">
+<span class="material-symbols-outlined text-[20px]">dentistry</span>
+</span>
+</div>
+<div class="mt-3">
+<div class="flex justify-between text-label-sm font-label-sm text-outline mb-1">
+<span>ใช้วงเงินไป: ฿0</span>
+<span class="font-semibold text-emerald-700">คงเหลือ 100%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-emerald-600 h-full rounded-full" style="width: 100%"></div>
+</div>
+<p class="text-label-sm font-label-sm text-outline mt-2">สิทธิเต็ม ฿2,000 ต่อปีงบประมาณ</p>
+</div>
+</div>
+  <!-- 1. กองทุนสำรองเลี้ยงชีพ (Provident Fund - PVD) -->
+  <div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-4 shadow-sm relative overflow-hidden flex flex-col justify-between">
+    <div class="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
+    <div>
+      <div class="flex items-start justify-between">
+        <div>
+          <span class="text-label-sm font-label-sm uppercase text-outline">กองทุนสำรองเลี้ยงชีพ (PVD Fund)</span>
+          <h3 class="text-headline-lg font-headline-lg text-primary mt-1 tabular-nums font-bold">฿248,xxx</h3>
+        </div>
+        <span class="p-2 rounded-lg bg-surface-container-low text-primary">
+          <span class="material-symbols-outlined text-[20px]">savings</span>
+        </span>
+      </div>
+
+      <div class="mt-3 space-y-1.5 border-t border-outline-variant/60 pt-2.5">
+        <div class="flex justify-between text-label-sm font-label-sm">
+          <span class="text-outline">เงินสะสมพนักงาน (5%):</span>
+          <span class="font-semibold text-primary tabular-nums">฿124,xxx</span>
+        </div>
+        <div class="flex justify-between text-label-sm font-label-sm">
+          <span class="text-outline">เงินสมทบบริษัท OST (5%):</span>
+          <span class="font-semibold text-primary tabular-nums">฿124,xxx</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-3 pt-2 border-t border-outline-variant/40 flex items-center justify-between">
+      <span class="text-label-xs text-outline">ผลตอบแทนเฉลี่ย YTD</span>
+      <span class="text-label-sm font-label-sm text-emerald-700 font-semibold flex items-center gap-0.5">
+        <span class="material-symbols-outlined text-[16px]">trending_up</span>
+        +4.8%
+      </div>
+   </div>
+</div>
+  <!-- 2. กองทุนสงเคราะห์ลูกจ้าง (Employee Welfare Fund - EWF) -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-4 shadow-sm relative overflow-hidden flex flex-col justify-between">
+    <div class="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
+    <div>
+      <div class="flex items-start justify-between">
+        <div>
+          <span class="text-label-sm font-label-sm uppercase text-outline">กองทุนสงเคราะห์ลูกจ้าง (EWF)</span>
+          <h3 class="text-headline-lg font-headline-lg text-primary mt-1 tabular-nums font-bold">฿0</h3>
+        </div>
+        <span class="p-2 rounded-lg bg-surface-container-low text-secondary">
+          <span class="material-symbols-outlined text-[20px]">diversity_3</span>
+        </span>
+      </div>
+
+      <div class="mt-3 space-y-1.5 border-t border-outline-variant/60 pt-2.5">
+        <div class="flex justify-between text-label-sm font-label-sm">
+          <span class="text-outline">เงินสะสมสมาชิก (0.25%):</span>
+          <span class="font-semibold text-primary tabular-nums">฿0</span>
+        </div>
+        <div class="flex justify-between text-label-sm font-label-sm">
+          <span class="text-outline">เงินสมทบสวัสดิการโรงงาน (0.25%):</span>
+          <span class="font-semibold text-primary tabular-nums">฿0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-3 pt-2 border-t border-outline-variant/40 flex items-center justify-between">
+<p class="text-label-sm font-label-sm text-outline mt-2">1 ตุลาคม 2574 เป็นต้นไป: ปรับเพิ่มเป็นฝ่ายละ 0.5% ของค่าจ้าง</span>
+      <span class="text-label-sm font-label-sm text-blue-700 font-semibold flex items-center gap-0.5">
+        <span class="material-symbols-outlined text-[16px]">verified</span>
+        กรณีลาออก เลิกจ้าง หรือเสียชีวิต รับเงินจากกองทุน 100%
+    </div>
+  </div>
+
+<!-- Benefit 4: สวัสดิการเงินแสดงความยินดีกับบุตรคนแรก & จดทะเบียนสมรส -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-4 shadow-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-amber-600"></div>
+<div class="flex items-start justify-between">
+<div>
+<span class="text-label-sm font-label-sm uppercase text-outline">บุตรคนแรก &amp; ทะเบียนสมรส</span>
+<h3 class="text-title-lg font-title-lg text-primary mt-1">คุ้มครองครอบครัวโดยสมบูรณ์</h3>
+</div>
+<span class="p-2 rounded-lg bg-amber-50 text-amber-700">
+<span class="material-symbols-outlined text-[20px]">family_restroom</span>
+
+</span>
+</div>
+<div class="mt-3 space-y-1">
+<p class="text-body-sm font-body-sm text-on-surface-variant flex items-center gap-1">
+</span>
+</div>
+<div class="flex justify-between text-label-sm font-label-sm">
+        <span class="text-outline">แสดงความยินดีบุตรคลอดบุตร:</span>
+          <span class="font-semibold text-primary tabular-nums">฿2,000</span>
+        </div>
+        <div class="flex justify-between text-label-sm font-label-sm">
+          <span class="text-outline">แสดงความยินดีจดทะเบียนสมรส:</span>
+          <span class="font-semibold text-primary tabular-nums">฿2,000</span>
+        </div>
+        <div class="flex justify-between text-label-sm font-label-sm">
+          <span class="text-outline">แสดงความเสียใจบุคคลในครอบครัวเสียชีวิต  ( กรณี บิดา มารดา ภรรยา และบุตร เสียชีวิต):</span>
+          <span class="font-semibold text-primary tabular-nums">฿15,000</span>
+        </div> 
+    <div class="mt-3 space-y-1"
+    <div class="mt-3 space-y-1">
+<span class="material-symbols-outlined text-[18px] text-emerald-600">check_circle</span class="mt-3 space-y-1.5 border-t border-outline-variant/80 pt-1"></span> เงื่อนไขการขอเบิก : ยื่นหลักฐาน สำเนาสูติบัตร/ สำเนาทะเบียนสมรส / สำเนามรณบัตร ลงชื่อกำกับสำเนาถูกต้อง ยื่นภายใน 30 วัน</span><span class="text-10 font-semibold flex items-center gap-1 shrink-600">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+      สิทธิ์พร้อมใช้งาน
+    </span>
+  </div>
+</section>

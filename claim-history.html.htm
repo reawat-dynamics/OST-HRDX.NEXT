@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html class="h-full bg-background" lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ประวัติและสถานะการเบิกจ่ายสวัสดิการ | OWARI SEIKI (THAILAND) HR-Dx</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Noto Sans & Noto Sans Thai -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;family=Noto+Sans+Thai:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-container": "#7991af",
+            "tertiary-fixed": "#85f8c4",
+            "inverse-surface": "#213145",
+            "surface-tint": "#49607c",
+            "primary-container": "#0f2942",
+            "tertiary-container": "#002e1d",
+            "secondary-fixed-dim": "#a2c9ff",
+            "secondary-container": "#7db6ff",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed-dim": "#68dba9",
+            "on-tertiary-fixed": "#002114",
+            "surface-variant": "#d3e4fe",
+            "on-secondary-fixed": "#001c38",
+            "background": "#f8f9ff",
+            "on-tertiary-fixed-variant": "#005137",
+            "surface-container-lowest": "#ffffff",
+            "tertiary": "#00170d",
+            "on-primary": "#ffffff",
+            "surface-container-highest": "#d3e4fe",
+            "error-container": "#ffdad6",
+            "primary-fixed-dim": "#b0c9e8",
+            "on-secondary-container": "#00477f",
+            "secondary-fixed": "#d3e4ff",
+            "surface-container-low": "#eff4ff",
+            "inverse-primary": "#b0c9e8",
+            "surface-bright": "#f8f9ff",
+            "on-secondary-fixed-variant": "#004881",
+            "on-surface": "#0b1c30",
+            "outline": "#74777e",
+            "on-tertiary-container": "#21a173",
+            "on-primary-fixed-variant": "#314863",
+            "outline-variant": "#c3c6ce",
+            "surface": "#f8f9ff",
+            "inverse-on-surface": "#eaf1ff",
+            "on-error-container": "#93000a",
+            "surface-dim": "#cbdbf5",
+            "primary-fixed": "#d1e4ff",
+            "error": "#ba1a1a",
+            "on-primary-fixed": "#011d35",
+            "on-secondary": "#ffffff",
+            "surface-container": "#e5eeff",
+            "on-error": "#ffffff",
+            "on-background": "#0b1c30",
+            "surface-container-high": "#dce9ff",
+            "on-surface-variant": "#43474d",
+            "secondary": "#1960a3",
+            "primary": "#001428"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xl": "2rem",
+            "space-md": "1rem",
+            "gutter-mobile": "0.75rem",
+            "margin-mobile": "1rem",
+            "space-xs": "0.25rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem",
+            "margin": "2rem"
+          },
+          "fontFamily": {
+            "headline-xl-mobile": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "body-lg": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "title-sm": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "label-sm": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "body-sm": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "body-md": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "title-md": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "title-lg": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "headline-xl": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "label-lg": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "headline-md": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "headline-lg-mobile": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "headline-lg": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "label-md": ["Noto Sans", "Noto Sans Thai", "sans-serif"]
+          },
+          "fontSize": {
+            "headline-xl-mobile": ["1.625rem", { "lineHeight": "2.125rem", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-lg": ["1rem", { "lineHeight": "1.625rem", "fontWeight": "400" }],
+            "title-sm": ["0.875rem", { "lineHeight": "1.25rem", "fontWeight": "600" }],
+            "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "body-sm": ["0.75rem", { "lineHeight": "1.125rem", "fontWeight": "400" }],
+            "body-md": ["0.875rem", { "lineHeight": "1.375rem", "fontWeight": "400" }],
+            "title-md": ["1rem", { "lineHeight": "1.5rem", "fontWeight": "600" }],
+            "title-lg": ["1.125rem", { "lineHeight": "1.625rem", "fontWeight": "600" }],
+            "headline-xl": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-lg": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "500" }],
+            "headline-md": ["1.25rem", { "lineHeight": "1.75rem", "fontWeight": "600" }],
+            "headline-lg-mobile": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "500" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      height: 6px;
+      width: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #c3c6ce;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="h-full antialiased font-body-md text-on-surface bg-background flex flex-col overflow-hidden">
+<!-- TOP NAVIGATION BAR (Shared Component Anchor) -->
+<header class="w-full h-16 flex items-center justify-between px-space-md lg:px-space-xl z-40 border-b border-outline-variant bg-surface-container-lowest shrink-0">
+<div class="flex items-center gap-space-lg">
+<!-- Brand Logo / Product Name -->
+<div class="flex items-center gap-3">
+<img alt="Owari Seiki Corporate Precision Automotive Emblem" class="h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpGhLDbBJhMLIilISs7v0c174hq_UKGpzoZ-1IJGJo7lLtEt9EGXbmdGEDdXDeILcKW-2Dj1g_rKusKlUmTKhhZuT1SFMTyECzqEnT6cfGrlNPLmuBcVheugEzbdD09gwde05YgXB8N03U50KcuVEnPIXli0A8BHJ_uOewABKpJ9c2ZiiJJjxnpFvX2qVQSbfJedW5iy-q3Ra5Dsxgs4zpeehhv3cGL7ZQXWCXBMiB9pdOeq0NsRJGBLuqzPBkfWTvTg4"/>
+</div>
+<div>
+<span class="text-title-md font-title-md font-bold text-primary tracking-tight block leading-tight">OWARI SEIKI (THAILAND) HR-Dx</span>
+<span class="text-label-sm font-label-sm text-outline block">ระบบบริการพนักงานอัตโนมัติ (Employee Self-Service)</span>
+</div>
+</div>
+<!-- Quick Search Bar (Shared Anchor: on_left) -->
+<div class="hidden md:flex items-center relative w-72">
+<span class="material-symbols-outlined absolute left-3 text-outline text-lg">search</span>
+<input class="w-full h-9 pl-9 pr-3 rounded-lg border border-outline-variant text-body-sm font-body-sm bg-surface-container-lowest focus:border-secondary focus:ring-1 focus:ring-secondary focus:outline-none transition-colors duration-150" placeholder="ค้นหาเลขที่คำร้อง, สวัสดิการ..." type="text"/>
+</div>
+</div>
+<!-- Navigation Links & Trailing Actions -->
+<div class="flex items-center gap-space-lg">
+<nav class="hidden xl:flex items-center gap-6">
+<a class="text-on-surface-variant hover:text-primary font-label-lg transition-colors duration-150" href="#">Dashboard</a>
+<a class="text-secondary border-b-2 border-secondary font-title-sm pb-1" href="#">Claims</a>
+<a class="text-on-surface-variant hover:text-primary font-label-lg transition-colors duration-150" href="#">Work Calendar</a>
+<a class="text-on-surface-variant hover:text-primary font-label-lg transition-colors duration-150" href="#">Support</a>
+</nav>
+<div class="flex items-center gap-2 border-l border-outline-variant pl-4">
+<!-- Icons: translate, notifications, help -->
+<button class="w-9 h-9 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors duration-150" title="เปลี่ยนภาษา (TH/JP/EN)" type="button">
+<span class="material-symbols-outlined text-[20px]">translate</span>
+</button>
+<button class="relative w-9 h-9 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors duration-150" title="การแจ้งเตือน" type="button">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors duration-150" title="ช่วยเหลือ" type="button">
+<span class="material-symbols-outlined text-[20px]">help</span>
+</button>
+<!-- Trailing Primary Action from JSON -->
+<a class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-primary-container hover:bg-[#1a365d] active:scale-[0.98] text-on-primary text-label-md font-label-md shadow-sm transition-all duration-150 ml-1" href="#">
+<span class="material-symbols-outlined text-base">add</span>
+<span>ยื่นคำร้องเบิกสวัสดิการ</span>
+</a>
+<!-- Profile Avatar & Badge -->
+<div class="flex items-center gap-2.5 ml-2 pl-2 border-l border-outline-variant">
+<div class="relative">
+<img class="w-auto h-9 sm:w-auto sm:h-19 rounded-xl object-cover border-2 border-surface-container-high shadow-xs" data-alt="High-resolution professional ID portrait photo of a senior Thai automotive technician wearing dark blue Japanese corporate manufacturing uniform with high-visibility plant tag in Rayong facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhupkviauAxHS4kac5b8sNhFtY9yQTyn-NmTKpSH2lf4s1FbwChWw8N5YS-kqOWEOnsmFtOYg7jBMVhg3NhMEm051n2NYvciElk3YdDVj1gkC3qNWCGAjL6nMY-FEstiobda9rUyP7lcg93VI1iaWQZfEWnLMq-RamzBhJaaCx69EWg56OBQpd6XDJ4uwyTpY3Vnp2QCmpM6pwMZ-Gp8S35akMnmxFQOGxp-bZGvT2wVLb9uh__eXlCtQHPsvzTTrWXHBzj_ucNv1cqW8">
+<span class="absolute bottom-0 right-0 w-auto h-auto bg-emerald-500 rounded-full border-2 border-surface-container-lowest"></span>
+</div>
+<div class="hidden lg:block text-left">
+<p class="text-label-md font-label-md text-primary leading-tight">สวัสดี!! คุณณเดช</p>
+<p class="text-label-sm font-label-sm text-outline">OST-07-00001</p>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- BODY CONTENT WRAPPER WITH FIXED SIDEBAR -->
+<div class="flex-1 flex overflow-hidden">
+<!-- DOCKED SIDEBAR (Shared Component Anchor) -->
+<aside class="w-64 min-w-[16rem] h-full flex flex-col justify-between p-space-md border-r border-outline-variant bg-surface-container-lowest shrink-0 overflow-y-auto">
+<div class="space-y-4">
+<!-- Plant 2 Context Badge Card -->
+<div class="p-3 rounded-lg bg-surface-container-low border border-outline-variant flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-surface-container-lowest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-base">factory</span>
+</div>
+<div class="min-w-0">
+<span class="text-title-sm font-title-sm font-bold text-primary block truncate">OST HR DX</span>
+<span class="text-label-sm font-label-sm text-outline block truncate">Head Office - Rayong</span>
+</div>
+</div>
+<!-- Navigation Tabs -->
+        <nav class="space-y-1">
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-surface-container-low text-secondary border-l-4 border-secondary font-title-sm transition-all duration-150 active:scale-[0.99]" href="/HTML%Code%OST%HR%DX/index.html.htm">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+            <span class="truncate">Dashboard (ภาพรวมระบบ)</span>
+          </a>
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="/HTML%Code%OST%HR%DX/personal.html.htm">
+            <span class="material-symbols-outlined text-[20px]">badge</span>
+            <span class="truncate">ข้อมูลส่วนตัว (Profile)</span>
+          </a>
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="/HTML%Code%OST%HR%DX/ot-request.html.htm">
+            <span class="material-symbols-outlined text-[20px]">more_time</span>
+            <span class="truncate">ขออนุมัติทำงานล่วงเวลา (OT Request)</span>
+          </a>
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="/HTML%Code%OST%HR%DX/welfare.html.htm">
+            <span class="material-symbols-outlined text-[20px]">health_and_safety</span>
+            <span class="truncate">สิทธิสวัสดิการ (Benefits)</span>
+          </a>
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="/HTML%Code%OST%HR%DX/request.html.htm">
+            <span class="material-symbols-outlined text-[20px]">post_add</span>
+            <span class="truncate">ยื่นคำร้อง (Claim Request)</span>
+          </a>
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="/HTML%Code%OST%HR%DX/claim-history.html.htm">
+            <span class="material-symbols-outlined text-[20px]">receipt_long</span>
+            <span class="truncate">ประวัติการเบิกจ่าย (Claim History)</span>
+          </a>
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="#">
+            <span class="material-symbols-outlined text-[20px]">manage_accounts</span>
+            <span class="truncate">จัดการข้อมูลพนักงาน (HR Workforce)</span>
+          </a>
+                    <!-- 6. แบบฟอร์มต่างๆ (HR Form) -->
+           <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" 
+         href="/HTML%Code%OST%HR%DX/online_viewer_net%Claim%History.htm">
+        <span class="material-symbols-outlined text-[20px]">description</span>
+        <span class="truncate">แบบฟอร์มต่างๆ (HR Form)</span>
+      </a>
+
+      <!-- 7. จองห้องประชุม (Meeting room booking) -->
+      <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" 
+         href="/HTML%Code%OST%HR%DX/online_viewer_net%Claim%History.htm">
+        <span class="material-symbols-outlined text-[20px]">meeting_room</span>
+        <span class="truncate">จองห้องประชุม (Meeting Room)</span>
+      </a>
+
+      <!-- 8. ขอใช้รถยนต์บริษัท (Car Booking) -->
+        <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" 
+         href="/HTML%Code%OST%HR%DX/online_viewer_net%Claim%History.htm">
+        <span class="material-symbols-outlined text-[20px]">directions_car</span>
+        <span class="truncate">ขอใช้รถยนต์บริษัท (Car Booking)</span>
+      </a>
+
+      <!-- 9. ขอหนังสือรับรอง (Certificate Request) -->
+      <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" 
+         href="/HTML%Code%OST%HR%DX/online_viewer_net%Claim%History.htm">
+        <span class="material-symbols-outlined text-[20px]">verified</span>
+        <span class="truncate">ขอหนังสือรับรอง (Certificate Request)</span>
+      </a>
+
+      <!-- 11. แจ้งซ่อม/สร้าง (Maintenance Request) -->
+      <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" 
+         href="/HTML%Code%OST%HR%DX/online_viewer_net%Claim%History.htm">
+        <span class="material-symbols-outlined text-[20px]">home_repair_service</span>
+        <span class="truncate">แจ้งซ่อม/สร้าง (Maintenance Request)</span>
+      </a>
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="#">
+            <span class="material-symbols-outlined text-[20px]">approval</span>
+            <span class="truncate">อนุมัติสวัสดิการ (Benefit Approvals)</span>
+          </a>
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="#">
+            <span class="material-symbols-outlined text-[20px]">analytics</span>
+            <span class="truncate">รายงานสรุป (Executive Reports)</span>
+          </a>
+        </nav>
+
+        <!-- CTA Download Forms -->
+        <div class="pt-2">
+          <button class="w-full flex items-center justify-center gap-2 py-2 px-3 border border-secondary text-secondary rounded-lg font-label-md hover:bg-surface-container-low transition-colors duration-150">
+            <span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+            <span class="">ดาวน์โหลดเอกสาร (Forms)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Footer Action Tabs -->
+      <div class="pt-4 border-t border-outline-variant/60 space-y-1">
+        <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-colors duration-150" href="#">
+          <span class="material-symbols-outlined text-[20px]">settings</span>
+          <span class="">การตั้งค่าระบบ (Settings)</span>
+        </a>
+        <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-error hover:bg-error-container/40 font-label-md transition-colors duration-150" href="#">
+          <span class="material-symbols-outlined text-[20px]">logout</span>
+          <span class="">ออกจากระบบ (Sign Out)</span>
+        </a>
+      </div>
+    </aside>
+<!-- MAIN SCROLLABLE WORKSPACE CANVAS -->
+<main class="flex-1 overflow-y-auto px-4 md:px-8 py-6 space-y-6">
+<!-- BREADCRUMB & PAGE HEADER -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-outline-variant">
+<div class="space-y-1">
+<!-- Breadcrumb -->
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-outline">
+<span class="hover:text-primary cursor-pointer transition-colors duration-150">บริการพนักงาน (Self-Service)</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-secondary font-semibold">ประวัติและสถานะการเบิกจ่าย (Claim History &amp; Tracking)</span>
+</div>
+<h1 class="text-headline-lg font-headline-lg text-primary tracking-tight">
+            ประวัติและสถานะการเบิกจ่ายสวัสดิการ (Claim History &amp; Tracking)
+          </h1>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            ตรวจสอบสถานะคำร้องขอเบิกสวัสดิการ ติดตามขั้นตอนการพิจารณา และประวัติการโอนเงินเข้าบัญชี
+          </p>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center gap-3 shrink-0">
+<button class="h-9 px-4 rounded-lg border border-outline-variant bg-surface-container-lowest hover:bg-surface-container-low text-on-surface-variant font-label-md text-label-md inline-flex items-center gap-2 transition-colors duration-150 shadow-xs" type="button">
+<span class="material-symbols-outlined text-base">download</span>
+<span>ส่งออกรายงาน (Export Excel/PDF)</span>
+</button>
+<a class="h-9 px-4 rounded-lg bg-primary-container hover:bg-[#1a365d] active:scale-[0.98] text-on-primary font-label-md text-label-md inline-flex items-center gap-2 transition-all duration-150 shadow-xs" href="#">
+<span class="material-symbols-outlined text-base">add_circle</span>
+<span>+ ยื่นคำร้องใหม่ (New Claim Request)</span>
+</a>
+</div>
+</div>
+<!-- METRIC SUMMARY CARDS (KPI Overview for FY2025) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Card 1: Total Claims FY2025 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div>
+<div class="flex items-center justify-between text-outline text-label-sm font-label-sm mb-1.5 uppercase">
+<span>คำร้องทั้งหมดในปีนี้ (Y2027)</span>
+<span class="material-symbols-outlined text-lg text-secondary">folder_open</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-headline-lg font-headline-lg text-primary tabular-nums">8</span>
+<span class="text-body-md font-body-md text-outline">รายการ</span>
+</div>
+</div>
+<div class="mt-3 pt-2.5 border-t border-outline-variant/60 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">มูลค่ารวมเบิกจ่าย:</span>
+<span class="text-primary font-semibold tabular-nums">฿700.00</span>
+</div>
+</div>
+<!-- Card 2: In Review / Pending -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-amber-500"></div>
+<div>
+<div class="flex items-center justify-between text-outline text-label-sm font-label-sm mb-1.5 uppercase">
+<span>กำลังดำเนินการ / รออนุมัติ</span>
+<span class="material-symbols-outlined text-lg text-amber-600">pending_actions</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-headline-lg font-headline-lg text-amber-700 tabular-nums">1</span>
+<span class="text-body-md font-body-md text-outline">รายการ</span>
+</div>
+</div>
+<div class="mt-3 pt-2.5 border-t border-outline-variant/60 flex items-center justify-between text-label-sm font-label-sm">
+<span class="px-2 py-0.5 rounded-lg bg-amber-50 text-amber-700 border border-amber-200">
+              รอตรวจสอบเอกสารต้นฉบับ
+            </span>
+<span class="text-amber-800 font-semibold tabular-nums">฿450.00</span>
+</div>
+</div>
+<!-- Card 3: Approved & Paid -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-emerald-600"></div>
+<div>
+<div class="flex items-center justify-between text-outline text-label-sm font-label-sm mb-1.5 uppercase">
+<span>อนุมัติและโอนเงินแล้ว</span>
+<span class="material-symbols-outlined text-lg text-emerald-600">task_alt</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-headline-lg font-headline-lg text-emerald-700 tabular-nums">6</span>
+<span class="text-body-md font-body-md text-outline">รายการ</span>
+</div>
+</div>
+<div class="mt-3 pt-2.5 border-t border-outline-variant/60 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-emerald-700 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">check</span> เข้าบัญชีเงินเดือน
+            </span>
+<span class="text-emerald-800 font-semibold tabular-nums">฿1,100.00</span>
+</div>
+</div>
+<!-- Card 4: Rejected / Cancelled -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-error"></div>
+<div>
+<div class="flex items-center justify-between text-outline text-label-sm font-label-sm mb-1.5 uppercase">
+<span>ไม่อนุมัติ / ยกเลิก</span>
+<span class="material-symbols-outlined text-lg text-error">cancel</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-headline-lg font-headline-lg text-error tabular-nums">1</span>
+<span class="text-body-md font-body-md text-outline">รายการ</span>
+</div>
+</div>
+<div class="mt-3 pt-2.5 border-t border-outline-variant/60 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-outline truncate" title="เอกสารเกินกำหนด 30 วัน">เอกสารเกินกำหนด 30 วัน</span>
+<span class="text-on-surface-variant font-semibold tabular-nums">฿700.00</span>
+</div>
+</div>
+</section>
+<!-- DETAILED TRACKING HERO CARD: SPOTLIGHT ON CURRENT IN-PROGRESS CLAIM -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-5 shadow-sm relative">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-4 border-b border-outline-variant">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-amber-50 border border-amber-200 text-amber-700 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">hourglass_top</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="text-title-md font-title-md text-primary">คำร้องล่าสุดที่อยู่ระหว่างดำเนินการ</span>
+<span class="px-2 py-0.5 rounded-lg bg-amber-100 text-amber-800 text-label-sm font-semibold border border-amber-300">
+                  #MED-2025-0142
+                </span>
+</div>
+<p class="text-body-sm font-body-sm text-outline">
+                ยื่นคำร้องเมื่อวันที่ 22 กุมภาพันธ์ 2570 เวลา 10:20 น. • ค่ารักษาพยาบาลครอบครัว (คู่สมรส)
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-3 self-end md:self-auto">
+<div class="text-right">
+<div class="text-label-sm font-label-sm text-outline">ยอดเงินที่ขอเบิกสวัสดิการ</div>
+<div class="text-title-lg font-title-lg font-bold text-primary tabular-nums">฿1,800.00</div>
+</div>
+<button class="h-9 px-3.5 rounded-lg border border-secondary text-secondary hover:bg-surface-container-low text-label-md font-label-md inline-flex items-center gap-1.5 transition-colors duration-150" type="button">
+<span class="material-symbols-outlined text-base">print</span>
+<span>พิมพ์ใบปะหน้าเอกสาร (Print Claim Slip)</span>
+</button>
+</div>
+</div>
+<!-- Claim Metadata Quick Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 py-3 text-body-sm border-b border-outline-variant/60 bg-surface-container-low/40 rounded-lg px-3 my-4">
+<div>
+<span class="text-outline text-label-sm block">ผู้รับสิทธิสวัสดิการ:</span>
+<span class="font-medium text-primary">นางญาญ่า สิริกา (คู่สมรส)</span>
+</div>
+<div>
+<span class="text-outline text-label-sm block">สถานพยาบาล:</span>
+<span class="font-medium text-primary">รพ.กรุงเทพ ระยอง</span>
+</div>
+<div>
+<span class="text-outline text-label-sm block">วันที่เข้ารับการรักษา:</span>
+<span class="font-medium text-primary">19 ก.พ. 2570</span>
+</div>
+<div>
+<span class="text-outline text-label-sm block">กำหนดการรอบเงินเดือน:</span>
+<span class="font-medium text-secondary font-semibold">28 ก.พ. 2570</span>
+</div>
+</div>
+<!-- HORIZONTAL STEPPER PROGRESS TRACKER -->
+<div class="pt-2 pb-4">
+<div class="relative">
+<!-- Connecting Line Background -->
+<div class="hidden md:block absolute top-1/2 left-6 right-6 h-0.5 bg-outline-variant -translate-y-1/2 z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative z-10">
+<!-- Step 1: Completed -->
+<div class="flex md:flex-col items-center gap-3 md:gap-2 text-left md:text-center">
+<div class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-xs ring-4 ring-surface-container-lowest">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div>
+<p class="text-label-md font-semibold text-primary">ยื่นคำร้องผ่านระบบ</p>
+<p class="text-label-sm text-emerald-700">22 ก.พ. 70 (10:20 น.)</p>
+</div>
+</div>
+<!-- Step 2: Completed -->
+<div class="flex md:flex-col items-center gap-3 md:gap-2 text-left md:text-center">
+<div class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-xs ring-4 ring-surface-container-lowest">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div>
+<p class="text-label-md font-semibold text-primary">ฝ่ายบุคคลตรวจเบื้องต้น</p>
+<p class="text-label-sm text-emerald-700">23 ก.พ. 70 (09:15 น.)</p>
+</div>
+</div>
+<!-- Step 3: Current Active (Awaiting Original Documents) -->
+<div class="flex md:flex-col items-center gap-3 md:gap-2 text-left md:text-center">
+<div class="w-8 h-8 rounded-full bg-amber-500 text-white flex items-center justify-center shrink-0 shadow-md ring-4 ring-amber-100 animate-pulse">
+<span class="material-symbols-outlined text-lg">receipt</span>
+</div>
+<div>
+<p class="text-label-md font-semibold text-amber-800">รอรับเอกสารใบเสร็จตัวจริง</p>
+<p class="text-label-sm text-amber-700 font-medium">กำลังดำเนินการ (ภายใน 26 ก.พ.)</p>
+</div>
+</div>
+<!-- Step 4: Pending Approval -->
+<div class="flex md:flex-col items-center gap-3 md:gap-2 text-left md:text-center opacity-60">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-outline flex items-center justify-center shrink-0 ring-4 ring-surface-container-lowest">
+<span class="material-symbols-outlined text-lg">verified_user</span>
+</div>
+<div>
+<p class="text-label-md font-medium text-on-surface-variant">อนุมัติโดย ผจก.ฝ่ายบุคคล</p>
+<p class="text-label-sm text-outline">รอเอกสารตัวจริงครบถ้วน</p>
+</div>
+</div>
+<!-- Step 5: Payroll Transfer -->
+<div class="flex md:flex-col items-center gap-3 md:gap-2 text-left md:text-center opacity-60">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-outline flex items-center justify-center shrink-0 ring-4 ring-surface-container-lowest">
+<span class="material-symbols-outlined text-lg">payments</span>
+</div>
+<div>
+<p class="text-label-md font-medium text-on-surface-variant">จ่ายเงินพร้อมรอบเงินเดือน</p>
+<p class="text-label-sm text-outline">รอบจ่าย 28 ก.พ. 2570</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Mandatory Action Callout Banner -->
+<div class="mt-2 p-3.5 rounded-lg bg-amber-50 border border-amber-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+<div class="flex items-center gap-2.5 text-amber-900">
+<span class="material-symbols-outlined text-amber-700 text-xl shrink-0">notification_important</span>
+<span class="text-body-sm font-body-sm">
+<strong class="font-semibold">ข้อปฏิบัติพนักงาน:</strong> กรุณานำใบเสร็จรับเงินต้นฉบับและใบรับรองแพทย์ตัวจริงยื่นที่ห้องสำนักงาน HR ฝ่ายบุคคล (ชั้น 2 อาคารสำนักงาน) ภายในวันที่ <strong>26 ก.พ. 2570 เวลา 17:00 น.</strong>
+</span>
+</div>
+<span class="text-label-sm text-amber-800 bg-amber-200/60 px-2.5 py-1 rounded font-medium shrink-0">
+            เหลือเวลาอีก 3 วัน
+          </span>
+</div>
+</section>
+<!-- COMPREHENSIVE CLAIM HISTORY TABLE SECTION -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm overflow-hidden">
+<!-- Table Header & Filter Toolbar -->
+<div class="p-4 border-b border-outline-variant space-y-3">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div>
+<h2 class="text-title-md font-title-md text-primary">รายการประวัติการเบิกจ่ายสวัสดิการย้อนหลัง</h2>
+<p class="text-body-sm font-body-sm text-outline">แสดงประวัติคำร้องสวัสดิการพนักงานและครอบครัว ประจำปีงบประมาณ 2570 (FY2027)</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-8 px-2.5 rounded-lg border border-outline-variant text-body-sm text-on-surface-variant hover:bg-surface-container-low flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-base">refresh</span>
+<span>รีเฟรช</span>
+</button>
+</div>
+</div>
+<!-- Filters Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-1">
+<!-- Search Filter -->
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
+<input class="w-full h-9 pl-8 pr-3 rounded-lg border border-outline-variant text-body-sm bg-surface-container-lowest focus:border-secondary focus:ring-1 focus:ring-secondary focus:outline-none" placeholder="ค้นหาเลขที่คำร้อง, สถานพยาบาล, ผู้รับสิทธิ..." type="text"/>
+</div>
+<!-- Benefit Type Dropdown -->
+<div class="relative">
+<select class="w-full h-9 px-3 rounded-lg border border-outline-variant text-body-sm bg-surface-container-lowest text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary focus:outline-none">
+<option value="">ประเภทสวัสดิการ: ทั้งหมด</option>
+<option value="medical">ค่ารักษาพยาบาล (Medical)</option>
+<option value="dental">ค่าทันตกรรม (Dental)</option>
+<option value="child">เงินช่วยเหลือบุตร (Child Allowance)</option>
+<option value="funeral">เงินช่วยเหลือณาปนกิจ (Funeral)</option>
+</select>
+</div>
+<!-- Status Dropdown -->
+<div class="relative">
+<select class="w-full h-9 px-3 rounded-lg border border-outline-variant text-body-sm bg-surface-container-lowest text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary focus:outline-none">
+<option value="">สถานะ: สถานะทั้งหมด</option>
+<option value="pending">รอพิจารณา / รอเอกสาร (Pending)</option>
+<option value="approved">อนุมัติแล้ว (Approved)</option>
+<option value="paid">โอนเงินสำเร็จแล้ว (Paid)</option>
+<option value="rejected">ไม่อนุมัติ (Rejected)</option>
+</select>
+</div>
+<!-- Date Range Picker -->
+<div class="relative">
+<select class="w-full h-9 px-3 rounded-lg border border-outline-variant text-body-sm bg-surface-container-lowest text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary focus:outline-none">
+<option value="FY2025">ปีงบประมาณ 2570 (FY2027)</option>
+<option value="FY2024">ปีงบประมาณ 2569 (FY2026)</option>
+<option value="ALL">ประวัติทั้งหมด (All Records)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- DATA TABLE -->
+<div class="overflow-x-auto custom-scroll">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#F8FAFC] border-b border-[#CBD5E1] text-[#475569] text-label-sm font-label-sm uppercase tracking-wider h-11">
+<th class="px-4 py-2 font-semibold">เลขที่คำร้อง &amp; วันที่ยื่น</th>
+<th class="px-4 py-2 font-semibold">ประเภทสวัสดิการ</th>
+<th class="px-4 py-2 font-semibold">ผู้รับสิทธิ / สถานพยาบาล</th>
+<th class="px-4 py-2 font-semibold text-right">จำนวนที่ขอเบิก</th>
+<th class="px-4 py-2 font-semibold text-right">จำนวนที่อนุมัติ</th>
+<th class="px-4 py-2 font-semibold text-center">สถานะคำร้อง</th>
+<th class="px-4 py-2 font-semibold">รอบจ่ายเงิน</th>
+<th class="px-4 py-2 font-semibold text-center">การจัดการ</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#F1F5F9] text-body-sm">
+<!-- ROW 1 (Current Active / In Progress) -->
+<tr class="bg-amber-50/20 hover:bg-surface-container-low transition-colors duration-150 cursor-pointer">
+<td class="px-4 py-3">
+<div class="font-semibold text-primary">#MED-2027-0142</div>
+<div class="text-label-sm text-outline">22/02/2570 (10:20 น.)</div>
+</td>
+<td class="px-4 py-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">health_and_safety</span>
+<span class="font-medium text-primary">ค่ารักษาพยาบาลครอบครัว</span>
+</div>
+<span class="text-label-sm text-outline">OPD ผู้ป่วยนอก</span>
+</td>
+<td class="px-4 py-3">
+<div class="font-medium text-primary">คู่สมรส (นางกานดา)</div>
+<div class="text-label-sm text-outline truncate max-w-[180px]">รพ.กรุงเทพ ระยอง</div>
+</td>
+<td class="px-4 py-3 text-right font-medium text-primary tabular-nums">
+                  ฿4,500.00
+                </td>
+<td class="px-4 py-3 text-right font-semibold text-amber-700 tabular-nums">
+                  ฿4,500.00 <span class="text-label-sm font-normal block text-outline">(รอจ่าย)</span>
+</td>
+<td class="px-4 py-3 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#FFFBEB] text-[#B45309] border border-[#FDE68A] text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+                    รอส่งใบเสร็จจริง
+                  </span>
+</td>
+<td class="px-4 py-3">
+<div class="text-primary font-medium">รอบ 28 ก.พ. 70</div>
+<div class="text-label-sm text-outline">โอนพร้อมเงินเดือน</div>
+</td>
+<td class="px-4 py-3 text-center">
+<button class="px-3 py-1.5 rounded-lg border border-outline-variant hover:border-secondary hover:text-secondary text-label-sm font-medium text-on-surface-variant transition-colors bg-surface-container-lowest" type="button">
+                    ดูรายละเอียด
+                  </button>
+</td>
+</tr>
+<!-- ROW 2 (Approved & Paid) -->
+<tr class="hover:bg-surface-container-low transition-colors duration-150 cursor-pointer">
+<td class="px-4 py-3">
+<div class="font-semibold text-primary">#DEN-2027-0089</div>
+<div class="text-label-sm text-outline">15/01/2570</div>
+</td>
+<td class="px-4 py-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">dentistry</span>
+<span class="font-medium text-primary">ค่าทันตกรรมพนักงาน</span>
+</div>
+<span class="text-label-sm text-outline">ขูดหินปูน / อุดฟัน</span>
+</td>
+<td class="px-4 py-3">
+<div class="font-medium text-primary">ตนเอง (นายณเดช)</div>
+<div class="text-label-sm text-outline truncate max-w-[180px]">คลินิกทันตกรรมระยองสไมล์</div>
+</td>
+<td class="px-4 py-3 text-right font-medium text-primary tabular-nums">
+                  ฿1,000.00
+                </td>
+<td class="px-4 py-3 text-right font-semibold text-emerald-700 tabular-nums">
+                  ฿1,000.00
+                </td>
+<td class="px-4 py-3 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#ECFDF5] text-[#047857] border border-[#A7F3D0] text-label-sm font-medium">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                    โอนเงินเรียบร้อยแล้ว
+                  </span>
+</td>
+<td class="px-4 py-3">
+<div class="text-primary font-medium">31 ม.ค. 70</div>
+<div class="text-label-sm text-emerald-600">BAY xxx-x-48291</div>
+</td>
+<td class="px-4 py-3 text-center">
+<button class="px-3 py-1.5 rounded-lg border border-outline-variant hover:border-secondary hover:text-secondary text-label-sm font-medium text-on-surface-variant transition-colors bg-surface-container-lowest" type="button">
+                    ดูรายละเอียด
+                  </button>
+</td>
+</tr>
+<!-- ROW 3 (Approved & Paid) -->
+<tr class="bg-[#FBFCFD] hover:bg-surface-container-low transition-colors duration-150 cursor-pointer">
+<td class="px-4 py-3">
+<div class="font-semibold text-primary">#MED-2026-0982</div>
+<div class="text-label-sm text-outline">12/12/2569</div>
+</td>
+<td class="px-4 py-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">health_and_safety</span>
+<span class="font-medium text-primary">ค่ารักษาพยาบาลครอบครัว</span>
+</div>
+<span class="text-label-sm text-outline">OPD เด็กเล็ก</span>
+</td>
+<td class="px-4 py-3">
+<div class="font-medium text-primary">บุตร (ด.ช. ภัทรดนัย)</div>
+<div class="text-label-sm text-outline truncate max-w-[180px]">รพ.ระยอง</div>
+</td>
+<td class="px-4 py-3 text-right font-medium text-primary tabular-nums">
+                  ฿1,200.00
+                </td>
+<td class="px-4 py-3 text-right font-semibold text-emerald-700 tabular-nums">
+                  ฿1,200.00
+                </td>
+<td class="px-4 py-3 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#ECFDF5] text-[#047857] border border-[#A7F3D0] text-label-sm font-medium">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                    โอนเงินเรียบร้อยแล้ว
+                  </span>
+</td>
+<td class="px-4 py-3">
+<div class="text-primary font-medium">27 ธ.ค. 69</div>
+<div class="text-label-sm text-emerald-600">ฺBAY xxx-x-48291</div>
+</td>
+<td class="px-4 py-3 text-center">
+<button class="px-3 py-1.5 rounded-lg border border-outline-variant hover:border-secondary hover:text-secondary text-label-sm font-medium text-on-surface-variant transition-colors bg-surface-container-lowest" type="button">
+                    ดูรายละเอียด
+                  </button>
+</td>
+</tr>
+<!-- ROW 4 (Approved & Paid) -->
+<tr class="hover:bg-surface-container-low transition-colors duration-150 cursor-pointer">
+<td class="px-4 py-3">
+<div class="font-semibold text-primary">#MED-2026-0850</div>
+<div class="text-label-sm text-outline">18/11/2569</div>
+</td>
+<td class="px-4 py-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">health_and_safety</span>
+<span class="font-medium text-primary">ค่ารักษาพยาบาลครอบครัว</span>
+</div>
+<span class="text-label-sm text-outline">OPD ตรวจความดัน</span>
+</td>
+<td class="px-4 py-3">
+<div class="font-medium text-primary">บิดา (นายทวี)</div>
+<div class="text-label-sm text-outline truncate max-w-[180px]">รพ.บ้านค่าย</div>
+</td>
+<td class="px-4 py-3 text-right font-medium text-primary tabular-nums">
+                  ฿800.00
+                </td>
+<td class="px-4 py-3 text-right font-semibold text-emerald-700 tabular-nums">
+                  ฿800.00
+                </td>
+<td class="px-4 py-3 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#ECFDF5] text-[#047857] border border-[#A7F3D0] text-label-sm font-medium">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                    โอนเงินเรียบร้อยแล้ว
+                  </span>
+</td>
+<td class="px-4 py-3">
+<div class="text-primary font-medium">29 พ.ย. 69</div>
+<div class="text-label-sm text-emerald-600">BAY xxx-x-48291</div>
+</td>
+<td class="px-4 py-3 text-center">
+<button class="px-3 py-1.5 rounded-lg border border-outline-variant hover:border-secondary hover:text-secondary text-label-sm font-medium text-on-surface-variant transition-colors bg-surface-container-lowest" type="button">
+                    ดูรายละเอียด
+                  </button>
+</td>
+</tr>
+<!-- ROW 5 (Rejected) -->
+<tr class="bg-[#FBFCFD] hover:bg-surface-container-low transition-colors duration-150 cursor-pointer">
+<td class="px-4 py-3">
+<div class="font-semibold text-primary">#DEN-2026-0411</div>
+<div class="text-label-sm text-outline">05/10/2569</div>
+</td>
+<td class="px-4 py-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">dentistry</span>
+<span class="font-medium text-primary">ค่าทันตกรรมพนักงาน</span>
+</div>
+<span class="text-label-sm text-outline">ฟอกสีฟัน (ไม่อยู่ในสิทธิ์)</span>
+</td>
+<td class="px-4 py-3">
+<div class="font-medium text-primary">ตนเอง (นายณเดช)</div>
+<div class="text-label-sm text-outline truncate max-w-[180px]">ทันตกรรมกรุงเทพ-ปลวกแดง</div>
+</td>
+<td class="px-4 py-3 text-right font-medium text-primary tabular-nums">
+                  ฿700.00
+                </td>
+<td class="px-4 py-3 text-right font-semibold text-error tabular-nums">
+                  ฿0.00
+                </td>
+<td class="px-4 py-3 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#FEF2F2] text-[#B91C1C] border border-[#FECACA] text-label-sm font-medium" title="เอกสารเกินกำหนด 30 วัน">
+<span class="material-symbols-outlined text-[13px]">cancel</span>
+                    ไม่อนุมัติ (เกิน 30 วัน)
+                  </span>
+</td>
+<td class="px-4 py-3">
+<span class="text-outline">-</span>
+</td>
+<td class="px-4 py-3 text-center">
+<button class="px-3 py-1.5 rounded-lg border border-outline-variant hover:border-secondary hover:text-secondary text-label-sm font-medium text-on-surface-variant transition-colors bg-surface-container-lowest" type="button">
+                    ดูรายละเอียด
+                  </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- TABLE PAGINATION FOOTER -->
+<div class="px-4 py-3 border-t border-outline-variant flex flex-col sm:flex-row items-center justify-between gap-3 text-label-sm">
+<div class="text-outline">
+            แสดง <span class="font-semibold text-primary">1 - 5</span> จากทั้งหมด <span class="font-semibold text-primary">8</span> รายการ
+          </div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded border border-outline-variant flex items-center justify-center text-outline cursor-not-allowed bg-surface-container-low opacity-50" disabled="" type="button">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded bg-primary-container text-white font-medium flex items-center justify-center" type="button">
+              1
+            </button>
+<button class="w-8 h-8 rounded border border-outline-variant hover:bg-surface-container-low text-on-surface flex items-center justify-center transition-colors" type="button">
+              2
+            </button>
+<button class="w-8 h-8 rounded border border-outline-variant hover:bg-surface-container-low text-on-surface flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- HR SUPPORT & POLICY FAQ QUICK HELP NOTE (Footer Grid) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-4 pb-4">
+<div class="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">event_upcoming</span>
+</div>
+<div>
+<h3 class="text-title-sm font-title-sm text-primary mb-1">รอบการตัดจ่ายเงินสวัสดิการ</h3>
+<p class="text-body-sm text-on-surface-variant leading-relaxed">
+              ฝ่ายบุคคลจะทำการตัดรอบเอกสารเบิกทุกวันที่ </strong> 28 ของเดือน</strong> หากส่งหลังวันที่ 28  จะถูกยกยอดไปจ่ายในรอบเงินเดือนถัดไป
+            </p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">account_balance</span>
+</div>
+<div>
+<h3 class="text-title-sm font-title-sm text-primary mb-1">ช่องทางการโอนเงิน</h3>
+<p class="text-body-sm text-on-surface-variant leading-relaxed">
+              โอนเข้าบัญชีเงินเดือน BAY ของพนักงานโดยตรง พร้อมใบแจ้งสลิปเงินเดือน (Payslip) ทุกวันที่ 28 ของแต่ละเดือน
+            </p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">support_agent</span>
+</div>
+<div>
+<h3 class="text-title-sm font-title-sm text-primary mb-1">ติดต่อเจ้าหน้าที่ HR </h3>
+<p class="text-body-sm text-on-surface-variant leading-relaxed">
+              มีข้อสงสัยเกี่ยวกับสิทธิสวัสดิการ โทรภายใน <strong>108, 157</strong> หรือติดต่อเคาน์เตอร์ฝ่ายบุคคล ชั้น 2 อาคารสำนักงาน
+            </p>
+</div>
+</div>
+</section>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html class="h-full bg-background" lang="th">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Owari Seiki (Thailand) HR Portal - Employee Central</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Noto Sans & Noto Sans Thai -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "error": "#ba1a1a",
+            "surface-tint": "#49607c",
+            "on-tertiary-fixed-variant": "#005137",
+            "primary-container": "#0f2942",
+            "primary-fixed-dim": "#b0c9e8",
+            "secondary-fixed": "#d3e4ff",
+            "on-primary-container": "#7991af",
+            "on-error": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "on-secondary-container": "#00477f",
+            "surface-container-highest": "#d3e4fe",
+            "on-primary-fixed": "#011d35",
+            "secondary-fixed-dim": "#a2c9ff",
+            "inverse-on-surface": "#eaf1ff",
+            "outline": "#74777e",
+            "primary": "#001428",
+            "on-tertiary-fixed": "#002114",
+            "tertiary-fixed-dim": "#68dba9",
+            "primary-fixed": "#d1e4ff",
+            "background": "#f8f9ff",
+            "on-primary-fixed-variant": "#314863",
+            "surface-container-lowest": "#ffffff",
+            "error-container": "#ffdad6",
+            "on-secondary-fixed-variant": "#004881",
+            "secondary": "#1960a3",
+            "on-tertiary-container": "#21a173",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed": "#001c38",
+            "on-secondary": "#ffffff",
+            "surface-container-high": "#dce9ff",
+            "surface-container": "#e5eeff",
+            "inverse-primary": "#b0c9e8",
+            "outline-variant": "#c3c6ce",
+            "surface-container-low": "#eff4ff",
+            "surface": "#f8f9ff",
+            "surface-bright": "#f8f9ff",
+            "inverse-surface": "#213145",
+            "surface-variant": "#d3e4fe",
+            "surface-dim": "#cbdbf5",
+            "on-surface": "#0b1c30",
+            "on-primary": "#ffffff",
+            "tertiary-container": "#002e1d",
+            "secondary-container": "#7db6ff",
+            "tertiary": "#00170d",
+            "on-surface-variant": "#43474d",
+            "on-background": "#0b1c30",
+            "tertiary-fixed": "#85f8c4"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "margin-mobile": "1rem",
+            "space-xl": "2rem",
+            "margin": "2rem",
+            "gutter-mobile": "0.75rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "gutter": "1.5rem"
+          },
+          "fontFamily": {
+            "body-md": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "title-lg": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "label-md": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "headline-lg-mobile": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "title-sm": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "label-sm": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "label-lg": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "headline-xl": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "headline-lg": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "body-sm": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "headline-md": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "title-md": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "body-lg": ["Noto Sans", "Noto Sans Thai", "sans-serif"],
+            "headline-xl-mobile": ["Noto Sans", "Noto Sans Thai", "sans-serif"]
+          },
+          "fontSize": {
+            "body-md": ["0.875rem", { "lineHeight": "1.375rem", "fontWeight": "400" }],
+            "title-lg": ["1.125rem", { "lineHeight": "1.625rem", "fontWeight": "600" }],
+            "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "headline-lg-mobile": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "title-sm": ["0.875rem", { "lineHeight": "1.25rem", "fontWeight": "600" }],
+            "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "label-lg": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "500" }],
+            "headline-xl": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-lg": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-sm": ["0.75rem", { "lineHeight": "1.125rem", "fontWeight": "400" }],
+            "headline-md": ["1.25rem", { "lineHeight": "1.75rem", "fontWeight": "600" }],
+            "title-md": ["1rem", { "lineHeight": "1.5rem", "fontWeight": "600" }],
+            "body-lg": ["1rem", { "lineHeight": "1.625rem", "fontWeight": "400" }],
+            "headline-xl-mobile": ["1.625rem", { "lineHeight": "2.125rem", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col">
+<!-- TOP APP BAR (Shared Component Execution) -->
+<header class="w-full h-16 flex items-center justify-between px-space-md lg:px-space-xl z-40 border-b border-outline-variant bg-surface-container-lowest sticky top-0 shadow-sm">
+<!-- Left Cluster: Brand & Plant Identification -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-3">
+<img alt="Owari Seiki Corporate Precision Automotive Emblem" class="h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpGhLDbBJhMLIilISs7v0c174hq_UKGpzoZ-1IJGJo7lLtEt9EGXbmdGEDdXDeILcKW-2Dj1g_rKusKlUmTKhhZuT1SFMTyECzqEnT6cfGrlNPLmuBcVheugEzbdD09gwde05YgXB8N03U50KcuVEnPIXli0A8BHJ_uOewABKpJ9c2ZiiJJjxnpFvX2qVQSbfJedW5iy-q3Ra5Dsxgs4zpeehhv3cGL7ZQXWCXBMiB9pdOeq0NsRJGBLuqzPBkfWTvTg4"/>
+<div class="hidden sm:flex flex-col">
+<span class="text-title-md font-title-md font-bold text-primary tracking-tight leading-none">OWARI SEIKI (THAILAND) HR-Dx</span>
+<span class="text-label-sm font-label-sm text-outline mt-0.5">ระบบบริการพนักงานอัตโนมัติ (Employee Self-Service)</span>
+</div>
+<!-- Quick Search Bar (search_bar: on_left) -->
+<div class="hidden xl:flex items-center relative w-72">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span>
+<input class="w-full pl-9 pr-3 py-1.5 bg-background border border-outline-variant rounded-lg text-body-sm font-body-sm placeholder:text-outline focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/30 transition-all" placeholder="ค้นหาเมนู, สิทธิสวัสดิการ, แบบฟอร์ม..." type="text"/>
+</div>
+</div>
+<!-- Center Navigation Links (Shared Component) -->
+<nav class="hidden md:flex items-center gap-space-lg">
+<a class="text-secondary border-b-2 border-secondary font-title-sm pb-1 transition-all duration-150 active:scale-[0.98]" href="#">Dashboard</a>
+<a class="text-on-surface-variant hover:text-primary font-label-lg transition-colors duration-150" href="#">Claims</a>
+<a class="text-on-surface-variant hover:text-primary font-label-lg transition-colors duration-150" href="#">Work Calendar</a>
+<a class="text-on-surface-variant hover:text-primary font-label-lg transition-colors duration-150" href="#">Support</a>
+</nav>
+<!-- Trailing Actions & Profile -->
+<div class="flex items-center gap-space-md">
+<!-- Trailing Action Button from JSON -->
+</button>
+<!-- Trailing Icon Actions: translate, notifications, help -->
+<div class="flex items-center gap-1 text-on-surface-variant">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-surface-container-low transition-colors duration-150" title="เปลี่ยนภาษา (TH/JP/EN)">
+<span class="material-symbols-outlined text-[20px]">translate</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-surface-container-low transition-colors duration-150 relative" title="การแจ้งเตือน">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-surface-container-low transition-colors duration-150" title="ศูนย์ช่วยเหลือ">
+<span class="material-symbols-outlined text-[20px]">help</span>
+</button>
+</div>
+<!-- User Profile Badge -->
+<div class="flex items-center gap-2.5 pl-2 border-l border-outline-variant/60">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed flex items-center justify-center text-primary font-title-sm border border-secondary/20 shadow-sm overflow-hidden">
+<span class="material-symbols-outlined text-[22px] text-secondary">person</span>
+</div>
+<div class="hidden sm:flex flex-col text-left">
+<span class="text-label-md font-label-md text-primary font-semibold leading-tight">Login : </span>
+<span class="text-label-sm font-label-sm text-outline">User /Password ID</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Shell Layout (SideNav + Content Area) -->
+<div class="flex-1 flex overflow-hidden">
+<!-- Docked SideNav (Shared Component: SideNavBar) -->
+<aside class="w-64 min-w-[16rem] h-[calc(100vh-4rem)] hidden md:flex flex-col justify-between p-space-md border-r border-outline-variant bg-surface-container-lowest shrink-0 custom-scrollbar overflow-y-auto">
+<div class="space-y-4">
+<!-- Plant Site Identifier Header -->
+<div class="flex items-center gap-2.5 px-space-sm py-2 rounded-lg bg-surface-container-low border border-outline-variant/50">
+<div class="w-8 h-8 rounded bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">factory</span>
+</div>
+<div class="flex flex-col overflow-hidden">
+<span class="text-title-sm font-title-sm text-primary truncate">OST HR DX)</span>
+<span class="text-label-sm font-label-sm text-outline truncate">Head Office - Rayong</span>
+</div>
+</div>
+<!-- Navigation Tabs -->
+        <nav class="space-y-1">
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-surface-container-low text-secondary border-l-4 border-secondary font-title-sm transition-all duration-150 active:scale-[0.99]" href="/HTML%Code%OST%HR%DX/index.html.htm">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+            <span class="truncate">Dashboard (ภาพรวมระบบ)</span>
+          </a>
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="/HTML%Code%OST%HR%DX/personal.html.htm">
+            <span class="material-symbols-outlined text-[20px]">badge</span>
+            <span class="truncate">ข้อมูลส่วนตัว (Profile)</span>
+          </a>
+      <!-- 10. ขออนุมัติทำงานล่วงเวลา (Overtime Request) -->
+      <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="/HTML%Code%OST%HR%DX/ot-request.html.htm">
+        <span class="material-symbols-outlined text-[20px]">more_time</span>
+        <span class="truncate">ขออนุมัติทำงานล่วงเวลา (OT Request)</span>
+      </a>
+
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="/HTML%Code%OST%HR%DX/welfare.html.htm">
+            <span class="material-symbols-outlined text-[20px]">health_and_safety</span>
+            <span class="truncate">สิทธิสวัสดิการ (Benefits)</span>
+          </a>
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="/HTML%Code%OST%HR%DX/request.html.htm">
+            <span class="material-symbols-outlined text-[20px]">post_add</span>
+            <span class="truncate">ยื่นคำร้อง (Claim Request)</span>
+          </a>
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="/HTML%Code%OST%HR%DX/claim-history.html.htm">
+            <span class="material-symbols-outlined text-[20px]">receipt_long</span>
+            <span class="truncate">ประวัติการเบิกจ่าย (Claim History)</span>
+          </a>
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="#">
+            <span class="material-symbols-outlined text-[20px]">manage_accounts</span>
+            <span class="truncate">จัดการข้อมูลพนักงาน (HR Workforce)</span>
+          </a>
+                    <!-- 6. แบบฟอร์มต่างๆ (HR Form) -->
+      <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" 
+         href="/HTML%Code%OST%HR%DX/online_viewer_net%Claim%History.htm">
+        <span class="material-symbols-outlined text-[20px]">description</span>
+        <span class="truncate">แบบฟอร์มต่างๆ (HR Form)</span>
+      </a>
+
+      <!-- 7. จองห้องประชุม (Meeting room booking) -->
+      <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" 
+         href="/HTML%Code%OST%HR%DX/online_viewer_net%Claim%History.htm">
+        <span class="material-symbols-outlined text-[20px]">meeting_room</span>
+        <span class="truncate">จองห้องประชุม (Meeting Room)</span>
+      </a>
+
+      <!-- 8. ขอใช้รถยนต์บริษัท (Car Booking) -->
+      <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" 
+         href="/HTML%Code%OST%HR%DX/online_viewer_net%Claim%History.htm">
+        <span class="material-symbols-outlined text-[20px]">directions_car</span>
+        <span class="truncate">ขอใช้รถยนต์บริษัท (Car Booking)</span>
+      </a>
+
+      <!-- 9. ขอหนังสือรับรอง (Certificate Request) -->
+      <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" 
+         href="/HTML%Code%OST%HR%DX/online_viewer_net%Claim%History.htm">
+        <span class="material-symbols-outlined text-[20px]">verified</span>
+        <span class="truncate">ขอหนังสือรับรอง (Certificate Request)</span>
+      </a>
+      <!-- 11. แจ้งซ่อม/สร้าง (Maintenance Request) -->
+      <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" 
+         href="/HTML%Code%OST%HR%DX/online_viewer_net%Claim%History.htm">
+        <span class="material-symbols-outlined text-[20px]">home_repair_service</span>
+        <span class="truncate">แจ้งซ่อม/สร้าง (Maintenance Request)</span>
+      </a>
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="#">
+            <span class="material-symbols-outlined text-[20px]">approval</span>
+            <span class="truncate">อนุมัติสวัสดิการ (Benefit Approvals)</span>
+          </a>
+          <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-all duration-150 active:scale-[0.99]" href="#">
+            <span class="material-symbols-outlined text-[20px]">analytics</span>
+            <span class="truncate">รายงานสรุป (Executive Reports)</span>
+          </a>
+        </nav>
+
+        <!-- CTA Download Forms -->
+        <div class="pt-2">
+          <button class="w-full flex items-center justify-center gap-2 py-2 px-3 border border-secondary text-secondary rounded-lg font-label-md hover:bg-surface-container-low transition-colors duration-150">
+            <span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+            <span class="">ดาวน์โหลดเอกสาร (Forms)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Footer Action Tabs -->
+      <div class="pt-4 border-t border-outline-variant/60 space-y-1">
+        <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md transition-colors duration-150" href="#">
+          <span class="material-symbols-outlined text-[20px]">settings</span>
+          <span class="">การตั้งค่าระบบ (Settings)</span>
+        </a>
+        <a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-error hover:bg-error-container/40 font-label-md transition-colors duration-150" href="#">
+          <span class="material-symbols-outlined text-[20px]">logout</span>
+          <span class="">ออกจากระบบ (Sign Out)</span>
+        </a>
+      </div>
+    </aside>
+<!-- Main Scrollable Canvas -->
+<main class="flex-1 bg-background overflow-y-auto custom-scrollbar p-space-md lg:p-space-xl">
+<div class="max-w-[1520px] mx-auto space-y-space-lg">
+<!-- 1. Hero Welcome & Plant Highlights Banner -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant p-6 lg:p-8 relative overflow-hidden shadow-[0_1px_3px_0_rgba(15,41,66,0.04)]">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center relative z-10">
+<!-- Left Info & Welcome Message -->
+<div class="lg:col-span-7 space-y-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-fixed/50 border border-secondary/30 rounded-full text-secondary text-label-sm font-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span>สวัสดี | SAWASDEE • สบายดี | SABUYDEE • สนุกดี  |  SANOOKDEE  </span>
+</div>
+<div>
+<h1 class="text-headline-lg font-headline-lg text-primary tracking-tight">
+                  ยินดีต้อนรับสู่  OST HR DX - Dashboard
+                </h1>
+<p class="text-body-md font-body-md text-on-surface-variant mt-1">
+                  สวัสดี • <span class="font-semibold text-primary">กะปฏิบัติการ </span> (08:00 - 17:00 น.) 
+                  | ประจำวันพฤหัสบดีที่ 15 พฤษภาคม 2570
+                </p>
+</div>
+<!-- Quick Plant Badges -->
+<div class="flex flex-wrap gap-2 text-label-sm font-label-sm text-on-surface-variant">
+<span class="px-2.5 py-1 rounded bg-surface-container border border-outline-variant/60 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-tertiary-container">verified</span>
+                  สถิติความปลอดภัย  4,990 วัน ปราศจากอุบัติเหตุ
+                </span>
+<span class="px-2.5 py-1 rounded bg-surface-container border border-outline-variant/60 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">schedule</span>
+                  บันทึกเวลาเข้างาน: 07:48 น. (ตรงเวลา)
+                </span>
+</div>
+<!-- Quick Action Cluster -->
+<div class="flex flex-wrap items-center gap-3 pt-2">
+<button class="px-4 py-2 bg-primary-container text-on-primary rounded text-label-lg font-label-lg hover:bg-primary transition-all duration-150 flex items-center gap-2 shadow-sm active:scale-[0.98]">
+<span class="material-symbols-outlined text-[18px]">post_add</span>
+<span>ยื่นคำร้องขอเบิกสวัสดิการ (Claim Submission)</span>
+</button>
+<button class="px-4 py-2 border border-secondary text-secondary rounded text-label-lg font-label-lg hover:bg-surface-container-low transition-colors duration-150 flex items-center gap-2 active:scale-[0.98]">
+<span class="material-symbols-outlined text-[18px]">account_balance_wallet</span>
+<span>เช็กโควตาสิทธิคงเหลือ (Check Benefits)</span>
+</button>
+<button class="px-3 py-2 text-on-surface-variant hover:text-primary rounded text-label-md font-label-md flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+<span>ปฏิทินวันทำงานโรงงาน (Work Calendar)</span>
+</button>
+</div>
+</div>
+<!-- Right Plant Visual Gallery Showcase -->
+<div class="lg:col-span-5 grid grid-cols-2 gap-3">
+<div class="relative rounded-lg overflow-hidden border border-outline-variant group shadow-sm bg-surface-container">
+<div class="aspect-[4/3] w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Modern Japanese-managed automotive precision factory exterior at Amata City Rayong with immaculate white company sign, landscaped hedges, clean concrete entryway, and clear blue sky reflecting corporate discipline and order." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-yfkW7pKwd5lY51EtgW69gCtygnqszXqgU6kZO22vuBGHVEH-IOSOYY0Nr0AYMUhurOxPddiOlaqpssGqzeR9_IyPoXNjaaAZ1klj0BqNSQ9sEnzpNMddbsHRx_QgvwaUI-vvovoUHYxlzb307AFzCRX-OdCwK6-QkpqSqZ740o8L2Zd0foWdS29W5t76PSHSf_zbD6NIc-9ALzRuQaR6XrEupCN_nr3cZAT84kF-GZqaqQea4_T74w"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-2.5">
+<span class="text-on-primary text-label-sm font-label-sm font-semibold">Head Office - Main Gate Entrance</span>
+</div>
+</div>
+<div class="relative rounded-lg overflow-hidden border border-outline-variant group shadow-sm bg-surface-container">
+<div class="aspect-[4/3] w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="High precision manufacturing line floor inside automotive plant showing pristine green epoxy floor, yellow safety walkways, industrial forging machinery, and Japanese Monozukuri operational 5S cleanliness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-ZECF5ggGLvAwy_VdjtyswJouy22eHpBDyUuxaZyOh9vFIK87dQFJMqYPMz1zq27qokJoeKQGbAmsbx-fEXPK3-vIkHLOSlcJ7Os8v8icRUsRPXJR9IzPg9a9mlcp8IkmuE_ppBe3JC-IrFeimf8VVpae-r-sEqJW5VWMwv8goTSiSFbhEoYIf0WxgIrXsIB4zeMV48zmbD-r9nC_ROtIR5F4XAcPDBC279IbkGmf4YyHNVq7sVxCqQ"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-2.5">
+<span class="text-on-primary text-label-sm font-label-sm font-semibold">Forging &amp; Precision Machining Line</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Subtle Blueprint Accent Overlay -->
+<div class="absolute -right-12 -bottom-12 w-64 h-64 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+        <!-- 2. ATTENDANCE & WORKFORCE OVERVIEW SECTION -->
+        <section class="space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[22px]">badge</span>
+              <div class="flex flex-wrap items-center gap-2">
+                <h2 class="text-title-lg font-title-lg text-primary font-bold">สรุปภาพรวมการมาปฏิบัติงานและกำลังพลตามกะ (Attendance &amp; Plant Workforce Overview)</h2>
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-label-sm font-label-sm bg-[#ECFDF5] text-[#047857] border border-[#A7F3D0]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#059669] animate-pulse"></span>
+                  <span>Live Status: </span>
+                </span>
+              </div>
+            </div>
+            <a class="text-label-md font-label-md text-secondary hover:underline flex items-center gap-1 self-start sm:self-auto" href="#">
+              <span>ดูรายงานบันทึกเวลาเข้า-ออกและโอทีทั้งหมด (Full Time Attendance &amp; OT Report)</span>
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </a>
+          </div>
+
+          <!-- 4 Shift Cards Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+            
+            <!-- Card 1: กะ Day (Office & Maintenance) -->
+            <div class="bg-surface-container-lowest rounded-lg border border-outline-variant p-4 shadow-xs relative flex flex-col justify-between border-t-[3px] border-t-[#D97706] hover:border-outline transition-all duration-150">
+              <div class="space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-label-sm font-label-sm text-outline uppercase tracking-wider">Day Shift (Office &amp; Maintenance)</span>
+                  <span class="w-7 h-7 rounded bg-[#FFFBEB] text-[#B45309] flex items-center justify-center border border-[#FDE68A]">
+                    <span class="material-symbols-outlined text-[16px]">wb_sunny</span>
+                  </span>
+                </div>
+                <div class="pt-2">
+                  <div class="flex items-baseline gap-1.5">
+                    <span class="text-headline-lg font-headline-lg text-primary tabular-nums font-bold">45 / 45</span>
+                    <span class="text-title-sm font-title-sm text-primary">คน</span>
+                    <span class="text-label-sm font-label-sm px-1.5 py-0.2 rounded bg-[#ECFDF5] text-[#047857] border border-[#A7F3D0] ml-1">100% On Time</span>
+                  </div>
+                  <span class="text-body-sm font-body-sm text-outline">เวลาทำการ: 08:00 - 17:00 น.</span>
+                </div>
+              </div>
+              <div class="pt-3 space-y-2">
+                <div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+                  <div class="bg-[#D97706] h-full rounded-full" style="width: 100%;"></div>
+                </div>
+                <div class="text-label-sm font-label-sm text-on-surface-variant flex justify-between">
+                  <span>ปกติ 43 | สาย 1 | ลาพัก 1</span>
+                  <span class="text-outline">พร้อมปฏิบัติงาน</span>
+                </div>
+                <div class="pt-2 border-t border-outline-variant/40 flex items-center justify-between text-label-sm font-label-sm">
+                  <span class="text-outline">OT วางแผน: 12 คน</span>
+                  <span class="text-[#B45309] font-medium">17:20 - 19:50 น.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: กะ A (Production Shift A - Day Run) -->
+            <div class="bg-surface-container-lowest rounded-lg border border-outline-variant p-4 shadow-xs relative flex flex-col justify-between border-t-[3px] border-t-secondary hover:border-outline transition-all duration-150">
+              <div class="space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-label-sm font-label-sm text-outline uppercase tracking-wider">Production Shift A (Day Run)</span>
+                  <span class="w-7 h-7 rounded bg-secondary-fixed/50 text-secondary flex items-center justify-center border border-secondary/20">
+                    <span class="material-symbols-outlined text-[16px]">precision_manufacturing</span>
+                  </span>
+                </div>
+                <div class="pt-2">
+                  <div class="flex items-baseline gap-1.5">
+                    <span class="text-headline-lg font-headline-lg text-primary tabular-nums font-bold">34 / 35</span>
+                    <span class="text-title-sm font-title-sm text-primary">คน</span>
+                    <span class="text-label-sm font-label-sm px-1.5 py-0.2 rounded bg-secondary-fixed text-primary border border-secondary/30 ml-1">เข้างาน 97.1%</span>
+                  </div>
+                  <span class="text-body-sm font-body-sm text-outline">สายผลิต Forging &amp; Machining (08:00 - 17:00 น.)</span>
+                </div>
+              </div>
+              <div class="pt-3 space-y-2">
+                <div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+                  <div class="bg-secondary h-full rounded-full" style="width: 97.1%;"></div>
+                </div>
+                <div class="text-label-sm font-label-sm text-on-surface-variant flex justify-between">
+                  <span>เข้างาน 34 | สาย 0 | ลาป่วย 1</span>
+                  <span class="text-secondary font-medium">เดินเครื่อง 100%</span>
+                </div>
+                <div class="pt-2 border-t border-outline-variant/40 flex items-center justify-between text-label-sm font-label-sm">
+                  <span class="text-outline">ทำ OT 2.5 ชม. ครบ 34 คน</span>
+                  <span class="text-secondary font-semibold">ยอดสะสม 85 ชม.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: กะ B (Production Shift B - Night Run) -->
+            <div class="bg-surface-container-lowest rounded-lg border border-outline-variant p-4 shadow-xs relative flex flex-col justify-between border-t-[3px] border-t-primary-container hover:border-outline transition-all duration-150">
+              <div class="space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-label-sm font-label-sm text-outline uppercase tracking-wider">Production Shift B (Night Run)</span>
+                  <span class="w-7 h-7 rounded bg-surface-container-high text-primary flex items-center justify-center border border-outline-variant">
+                    <span class="material-symbols-outlined text-[16px]">dark_mode</span>
+                  </span>
+                </div>
+                <div class="pt-2">
+                  <div class="flex items-baseline gap-1.5">
+                    <span class="text-headline-lg font-headline-lg text-primary tabular-nums font-bold">33 / 33</span>
+                    <span class="text-title-sm font-title-sm text-primary">คน</span>
+                    <span class="text-label-sm font-label-sm px-1.5 py-0.2 rounded bg-surface-container text-primary border border-outline-variant/60 ml-1">พร้อมเข้ากะ 100%</span>
+                  </div>
+                  <span class="text-body-sm font-body-sm text-outline">Forging &amp; Heat Treat (20:00 - 05:00 น.)</span>
+                </div>
+              </div>
+              <div class="pt-3 space-y-2">
+                <div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+                  <div class="bg-primary-container h-full rounded-full" style="width: 100%;"></div>
+                </div>
+                <div class="text-label-sm font-label-sm text-on-surface-variant flex justify-between">
+                  <span>Stand by 31 คน| กะดึก</span>
+                  <span class="text-tertiary-container font-medium">พร้อมผลิต</span>
+                </div>
+                <div class="pt-2 border-t border-outline-variant/40 flex items-center justify-between text-label-sm font-label-sm">
+                  <span class="text-outline">แผน OT กะดึก 2.5 ชม.</span>
+                  <span class="text-primary font-semibold">อนุมัติแล้ว 28 คน</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4: Total Workforce & Daily OT -->
+            <div class="bg-surface-container-lowest rounded-lg border border-outline-variant p-4 shadow-xs relative flex flex-col justify-between border-t-[3px] border-t-[#059669] hover:border-outline transition-all duration-150">
+              <div class="space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-label-sm font-label-sm text-outline uppercase tracking-wider">Total Workforce &amp; Daily OT</span>
+                  <span class="w-7 h-7 rounded bg-[#ECFDF5] text-[#047857] flex items-center justify-center border border-[#A7F3D0]">
+                    <span class="material-symbols-outlined text-[16px]">schedule</span>
+                  </span>
+                </div>
+                <div class="pt-2">
+                  <div class="flex items-baseline gap-2">
+                    <span class="text-headline-lg font-headline-lg text-primary tabular-nums font-bold">113</span>
+                    <span class="text-title-sm font-title-sm text-primary">คน (Active)</span>
+                    <span class="text-label-sm font-label-sm px-1.5 py-0.2 rounded bg-[#ECFDF5] text-[#047857] border border-[#A7F3D0]">OT 170.5 ชม.</span>
+                  </div>
+                  <div class="text-body-sm font-body-sm text-secondary font-medium">กำลังการผลิตเดินเครื่อง 98.2%</div>
+                </div>
+              </div>
+              <div class="pt-3 space-y-2">
+                <div class="text-label-sm font-label-sm text-outline flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-[#059669] text-[15px]">verified_user</span>
+                  <span>อนุมัติ OT ครบ 3 แผนก • ปราศจากอุบัติเหตุ</span>
+                </div>
+                <div class="pt-2 border-t border-outline-variant/40 flex items-center justify-between text-label-sm font-label-sm">
+                  <span class="text-outline">Safety First Kaizen</span>
+                  <a class="text-secondary hover:underline font-semibold flex items-center gap-0.5" href="#">
+                    <span>ตรวจสอบคำขอ OT ด่วน</span>
+                    <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- DEPARTMENT WORKFORCE BREAKDOWN TABLE & CHART (8 แผนกหลัก) -->
+          <div class="bg-surface-container-lowest rounded-lg border border-outline-variant p-5 shadow-xs space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-outline-variant/60 pb-3">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-secondary text-[22px]">view_kanban</span>
+                <div>
+                  <h3 class="text-title-md font-title-md text-primary font-semibold">สถิติกำลังพลจำแนกตามแผนก (8 แผนก) • Department Workforce Breakdown</h3>
+                  <p class="text-body-sm font-body-sm text-on-surface-variant">สัดส่วนการกระจายกำลังพลตามกะปฏิบัติงาน Plant 2 รวม 113 คน (ปฏิบัติงานจริง 111 คน • ลาป่วย 1 คน • ลาพักร้อน 1 คน)</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 text-label-sm font-label-sm"><div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-[#D97706]"></span><span class="text-on-surface-variant font-medium">Day (45)</span></div><div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-secondary"></span><span class="text-on-surface-variant font-medium">กะ A (35)</span></div><div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span><span class="text-on-surface-variant font-medium">กะ B (33)</span></div><div class="h-3 w-[1px] bg-outline-variant"></div><div class="flex items-center gap-1 text-label-sm"><span class="px-1.5 py-0.2 rounded bg-[#ECFDF5] text-[#047857] border border-[#A7F3D0] font-semibold">จริง 111</span><span class="px-1.5 py-0.2 rounded bg-error-container text-error border border-error/20 font-semibold">ลา 2</span></div></div>
+            </div>
+
+            <!-- Table -->
+            <div class="overflow-x-auto custom-scrollbar">
+              <table class="w-full text-left border-collapse text-body-sm"><thead class="bg-surface-container-low border-b border-outline-variant/70 text-label-sm font-label-sm text-outline uppercase"><tr><th class="py-2.5 px-3 font-semibold text-primary">แผนก (Department)</th><th class="py-2.5 px-2 text-center font-semibold text-[#B45309]">กะ DAY</th><th class="py-2.5 px-2 text-center font-semibold text-secondary">กะ A</th><th class="py-2.5 px-2 text-center font-semibold text-primary">กะ B</th><th class="py-2.5 px-2.5 text-center font-semibold text-primary">ตามแผน</th><th class="py-2.5 px-2.5 text-center font-semibold text-[#047857]">มาปฏิบัติงาน</th><th class="py-2.5 px-3 text-center font-semibold text-outline">สถิติลางาน (ป่วย / พัก)</th><th class="py-2.5 px-3 font-semibold text-primary min-w-[170px]">สัดส่วนตามกะ (Stacked Ratio)</th><th class="py-2.5 px-3 text-center font-semibold text-primary">สถานะกำลังพล</th></tr></thead><tbody class="divide-y divide-outline-variant/40"><tr class="hover:bg-surface-container-low/50 transition-colors"><td class="py-2.5 px-3 font-medium text-primary flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="">1. Cutting (ตัดโลหะ/ตัดท่อ)</span></td><td class="py-2.5 px-2 text-center tabular-nums text-on-surface font-medium">3</td><td class="py-2.5 px-2 text-center tabular-nums text-secondary font-medium">8</td><td class="py-2.5 px-2 text-center tabular-nums text-primary font-medium">7</td><td class="py-2.5 px-2.5 text-center tabular-nums font-semibold text-primary">18 คน</td><td class="py-2.5 px-2.5 text-center tabular-nums font-bold text-[#047857]">18 คน</td><td class="py-2.5 px-3 text-center tabular-nums text-outline text-label-sm">- (0 / 0)</td><td class="py-2.5 px-3"><div class="flex h-2.5 w-full rounded-full overflow-hidden bg-surface-container"><div class="bg-[#D97706]" style="width: 16.7%;" title="Day: 3 คน"></div><div class="bg-secondary" style="width: 44.4%;" title="กะ A: 8 คน"></div><div class="bg-primary-container" style="width: 38.9%;" title="กะ B: 7 คน"></div></div></td><td class="py-2.5 px-3 text-center"><span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-[#ECFDF5] text-[#047857] border border-[#A7F3D0]">ครบ 100%</span></td></tr><tr class="hover:bg-surface-container-low/50 transition-colors"><td class="py-2.5 px-3 font-medium text-primary flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="">2. Forging (ขึ้นรูปร้อน/เย็น)</span></td><td class="py-2.5 px-2 text-center tabular-nums text-on-surface font-medium">4</td><td class="py-2.5 px-2 text-center tabular-nums text-secondary font-medium">12</td><td class="py-2.5 px-2 text-center tabular-nums text-primary font-medium">12</td><td class="py-2.5 px-2.5 text-center tabular-nums font-semibold text-primary">28 คน</td><td class="py-2.5 px-2.5 text-center tabular-nums font-bold text-[#047857]">27 คน</td><td class="py-2.5 px-3 text-center tabular-nums text-error font-medium text-label-sm">ป่วย 1 คน (กะ A)</td><td class="py-2.5 px-3"><div class="flex h-2.5 w-full rounded-full overflow-hidden bg-surface-container"><div class="bg-[#D97706]" style="width: 14.3%;" title="Day: 4 คน"></div><div class="bg-secondary" style="width: 42.85%;" title="กะ A: 12 คน"></div><div class="bg-primary-container" style="width: 42.85%;" title="กะ B: 12 คน"></div></div></td><td class="py-2.5 px-3 text-center"><span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-error-container text-error border border-error/20">ลาป่วย 1 คน (กะ A)</span></td></tr><tr class="hover:bg-surface-container-low/50 transition-colors"><td class="py-2.5 px-3 font-medium text-primary flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="">3. Maintenance (บำรุงรักษา)</span></td><td class="py-2.5 px-2 text-center tabular-nums text-on-surface font-medium">5</td><td class="py-2.5 px-2 text-center tabular-nums text-secondary font-medium">2</td><td class="py-2.5 px-2 text-center tabular-nums text-primary font-medium">3</td><td class="py-2.5 px-2.5 text-center tabular-nums font-semibold text-primary">10 คน</td><td class="py-2.5 px-2.5 text-center tabular-nums font-bold text-[#047857]">10 คน</td><td class="py-2.5 px-3 text-center tabular-nums text-outline text-label-sm">- (0 / 0)</td><td class="py-2.5 px-3"><div class="flex h-2.5 w-full rounded-full overflow-hidden bg-surface-container"><div class="bg-[#D97706]" style="width: 50%;" title="Day: 5 คน"></div><div class="bg-secondary" style="width: 20%;" title="กะ A: 2 คน"></div><div class="bg-primary-container" style="width: 30%;" title="กะ B: 3 คน"></div></div></td><td class="py-2.5 px-3 text-center"><span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-[#ECFDF5] text-[#047857] border border-[#A7F3D0]">พร้อมซ่อมบำรุง</span></td></tr><tr class="hover:bg-surface-container-low/50 transition-colors"><td class="py-2.5 px-3 font-medium text-primary flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="">4. PD&amp;PC&amp;PK (วางแผน/คลัง/บรรจุ)</span></td><td class="py-2.5 px-2 text-center tabular-nums text-on-surface font-medium">7</td><td class="py-2.5 px-2 text-center tabular-nums text-secondary font-medium">5</td><td class="py-2.5 px-2 text-center tabular-nums text-primary font-medium">4</td><td class="py-2.5 px-2.5 text-center tabular-nums font-semibold text-primary">16 คน</td><td class="py-2.5 px-2.5 text-center tabular-nums font-bold text-[#047857]">16 คน</td><td class="py-2.5 px-3 text-center tabular-nums text-outline text-label-sm">- (0 / 0)</td><td class="py-2.5 px-3"><div class="flex h-2.5 w-full rounded-full overflow-hidden bg-surface-container"><div class="bg-[#D97706]" style="width: 43.75%;" title="Day: 7 คน"></div><div class="bg-secondary" style="width: 31.25%;" title="กะ A: 5 คน"></div><div class="bg-primary-container" style="width: 25%;" title="กะ B: 4 คน"></div></div></td><td class="py-2.5 px-3 text-center"><span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-[#ECFDF5] text-[#047857] border border-[#A7F3D0]">ส่งมอบตรงเวลา</span></td></tr><tr class="hover:bg-surface-container-low/50 transition-colors"><td class="py-2.5 px-3 font-medium text-primary flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="">5. HR&amp;ADMIN (บุคคลและธุรการ)</span></td><td class="py-2.5 px-2 text-center tabular-nums text-on-surface font-medium">8</td><td class="py-2.5 px-2 text-center tabular-nums text-secondary font-medium">0</td><td class="py-2.5 px-2 text-center tabular-nums text-primary font-medium">0</td><td class="py-2.5 px-2.5 text-center tabular-nums font-semibold text-primary">8 คน</td><td class="py-2.5 px-2.5 text-center tabular-nums font-bold text-[#047857]">7 คน</td><td class="py-2.5 px-3 text-center tabular-nums text-[#B45309] font-medium text-label-sm">พักร้อน 1 คน (Day)</td><td class="py-2.5 px-3"><div class="flex h-2.5 w-full rounded-full overflow-hidden bg-surface-container"><div class="bg-[#D97706]" style="width: 100%;" title="Day: 8 คน"></div></div></td><td class="py-2.5 px-3 text-center"><span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-[#FFFBEB] text-[#B45309] border border-[#FDE68A]">ลาพักร้อน 1 คน</span></td></tr><tr class="hover:bg-surface-container-low/50 transition-colors"><td class="py-2.5 px-3 font-medium text-primary flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="">6. QA/QC&amp;DCC (ควบคุมคุณภาพ/เอกสาร)</span></td><td class="py-2.5 px-2 text-center tabular-nums text-on-surface font-medium">5</td><td class="py-2.5 px-2 text-center tabular-nums text-secondary font-medium">5</td><td class="py-2.5 px-2 text-center tabular-nums text-primary font-medium">4</td><td class="py-2.5 px-2.5 text-center tabular-nums font-semibold text-primary">14 คน</td><td class="py-2.5 px-2.5 text-center tabular-nums font-bold text-[#047857]">14 คน</td><td class="py-2.5 px-3 text-center tabular-nums text-outline text-label-sm">- (0 / 0)</td><td class="py-2.5 px-3"><div class="flex h-2.5 w-full rounded-full overflow-hidden bg-surface-container"><div class="bg-[#D97706]" style="width: 35.7%;" title="Day: 5 คน"></div><div class="bg-secondary" style="width: 35.7%;" title="กะ A: 5 คน"></div><div class="bg-primary-container" style="width: 28.6%;" title="กะ B: 4 คน"></div></div></td><td class="py-2.5 px-3 text-center"><span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-[#ECFDF5] text-[#047857] border border-[#A7F3D0]">Zero Defect</span></td></tr><tr class="hover:bg-surface-container-low/50 transition-colors"><td class="py-2.5 px-3 font-medium text-primary flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="">7. Engineering (วิศวกรรมการผลิต)</span></td><td class="py-2.5 px-2 text-center tabular-nums text-on-surface font-medium">8</td><td class="py-2.5 px-2 text-center tabular-nums text-secondary font-medium">2</td><td class="py-2.5 px-2 text-center tabular-nums text-primary font-medium">2</td><td class="py-2.5 px-2.5 text-center tabular-nums font-semibold text-primary">12 คน</td><td class="py-2.5 px-2.5 text-center tabular-nums font-bold text-[#047857]">12 คน</td><td class="py-2.5 px-3 text-center tabular-nums text-outline text-label-sm">- (0 / 0)</td><td class="py-2.5 px-3"><div class="flex h-2.5 w-full rounded-full overflow-hidden bg-surface-container"><div class="bg-[#D97706]" style="width: 66.7%;" title="Day: 8 คน"></div><div class="bg-secondary" style="width: 16.65%;" title="กะ A: 2 คน"></div><div class="bg-primary-container" style="width: 16.65%;" title="กะ B: 2 คน"></div></div></td><td class="py-2.5 px-3 text-center"><span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-[#ECFDF5] text-[#047857] border border-[#A7F3D0]">ปกติครบ 100%</span></td></tr><tr class="hover:bg-surface-container-low/50 transition-colors"><td class="py-2.5 px-3 font-medium text-primary flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="">8. MGR. (ฝ่ายบริหาร/ผู้จัดการ)</span></td><td class="py-2.5 px-2 text-center tabular-nums text-on-surface font-medium">5</td><td class="py-2.5 px-2 text-center tabular-nums text-secondary font-medium">1</td><td class="py-2.5 px-2 text-center tabular-nums text-primary font-medium">1</td><td class="py-2.5 px-2.5 text-center tabular-nums font-semibold text-primary">7 คน</td><td class="py-2.5 px-2.5 text-center tabular-nums font-bold text-[#047857]">7 คน</td><td class="py-2.5 px-3 text-center tabular-nums text-outline text-label-sm">- (0 / 0)</td><td class="py-2.5 px-3"><div class="flex h-2.5 w-full rounded-full overflow-hidden bg-surface-container"><div class="bg-[#D97706]" style="width: 71.4%;" title="Day: 5 คน"></div><div class="bg-secondary" style="width: 14.3%;" title="กะ A: 1 คน"></div><div class="bg-primary-container" style="width: 14.3%;" title="กะ B: 1 คน"></div></div></td><td class="py-2.5 px-3 text-center"><span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-secondary-fixed text-primary border border-secondary/30">ประจำการครบ</span></td></tr></tbody><tfoot class="bg-surface-container border-t-2 border-outline-variant text-label-md font-semibold text-primary"><tr><td class="py-2.5 px-3 font-bold">รวมทั้งหมด (Total Plant 2)</td><td class="py-2.5 px-2 text-center tabular-nums text-[#B45309]">45 คน</td><td class="py-2.5 px-2 text-center tabular-nums text-secondary">35 คน</td><td class="py-2.5 px-2 text-center tabular-nums text-primary">33 คน</td><td class="py-2.5 px-2.5 text-center tabular-nums font-bold text-primary">113 คน</td><td class="py-2.5 px-2.5 text-center tabular-nums font-bold text-[#047857] text-[15px]">111 คน</td><td class="py-2.5 px-3 text-center tabular-nums text-error font-semibold text-label-sm">รวมลา 2 คน (ป่วย 1 / พัก 1)</td><td class="py-2.5 px-3"><div class="flex h-3 w-full rounded-full overflow-hidden bg-surface-container-high border border-outline-variant/50"><div class="bg-[#D97706]" style="width: 39.82%;" title="กะ Day: 45 คน (39.8%)"></div><div class="bg-secondary" style="width: 30.97%;" title="กะ A: 35 คน (31.0%)"></div><div class="bg-primary-container" style="width: 29.21%;" title="กะ B: 33 คน (29.2%)"></div></div></td><td class="py-2.5 px-3 text-center"><span class="px-2.5 py-0.5 rounded-full text-label-sm font-bold bg-[#ECFDF5] text-[#047857] border border-[#A7F3D0]">ปฏิบัติงาน 98.2%</span></td></tr></tfoot></table>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. CORE WORKING WORKSPACE: TWO-COLUMN BENTO LAYOUT -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                   
+          <!-- Left Column (8 cols): Announcements & Global Network -->
+          <div class="lg:col-span-8 space-y-6">
+            
+            <!-- Section: Company Announcements & Plant News -->
+            <div class="bg-surface-container-lowest rounded-lg border border-outline-variant p-6 shadow-xs space-y-4">
+              <div class="flex items-center justify-between border-b border-outline-variant/60 pb-3">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-secondary text-[22px]">campaign</span>
+                  <h3 class="text-title-md font-title-md text-primary font-bold">ประกาศและข่าวสารภายในโรงงาน (Company Announcements &amp; OST News)</h3>
+                </div>
+                <span class="text-label-sm font-label-sm text-outline">อัปเดตล่าสุด: วันนี้ 09:30 น.</span>
+              </div>
+
+              <!-- Announcement Items List -->
+              <div class="space-y-3">
+                <!-- Item 1: 5S & Safety Policy -->
+                <div class="p-3.5 rounded-lg border border-outline-variant/70 hover:border-secondary hover:bg-surface-container-low transition-all duration-150 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                  <div class="flex items-start gap-3">
+                    <div class="w-10 h-10 rounded bg-[#ECFDF5] text-[#047857] flex items-center justify-center shrink-0 mt-0.5 border border-[#A7F3D0]">
+                      <span class="material-symbols-outlined text-[20px]">security</span>
+                    </div>
+                    <div>
+                      <div class="flex items-center gap-2">
+                        <span class="px-2 py-0.2 rounded text-label-sm font-label-sm bg-[#ECFDF5] text-[#047857] border border-[#A7F3D0]">ความปลอดภัย 5S</span>
+                        <span class="text-label-sm font-label-sm text-outline">14 พ.ค. 2570</span>
+                      </div>
+                      <h4 class="text-title-sm font-title-sm text-primary font-semibold mt-0.5">ประกาศนโยบายความปลอดภัยและกิจกรรม 5S Big Cleaning ประจำสัปดาห์ </h4>
+                      <p class="text-body-sm font-body-sm text-on-surface-variant">ขอความร่วมมือพนักงานทุกกะปฏิบัติการ ตรวจสอบความพร้อมเครื่องจักรและจัดเก็บอุปกรณ์ตามมาตรฐาน Kaizen</p>
+                    </div>
+                  </div>
+                  <button class="shrink-0 px-3 py-1.5 text-secondary border border-secondary rounded font-label-sm hover:bg-surface-container-lowest transition-colors">
+                    อ่านประกาศ
+                  </button>
+                </div>
+
+                <!-- Item 2: Annual Health Checkup -->
+                <div class="p-3.5 rounded-lg border border-outline-variant/70 hover:border-secondary hover:bg-surface-container-low transition-all duration-150 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                  <div class="flex items-start gap-3">
+                    <div class="w-10 h-10 rounded bg-secondary-fixed/50 text-secondary flex items-center justify-center shrink-0 mt-0.5 border border-secondary/20">
+                      <span class="material-symbols-outlined text-[20px]">medical_services</span>
+                    </div>
+                    <div>
+                      <div class="flex items-center gap-2">
+                        <span class="px-2 py-0.2 rounded text-label-sm font-label-sm bg-secondary-fixed text-primary border border-secondary/30">สวัสดิการสุขภาพ</span>
+                        <span class="text-label-sm font-label-sm text-outline">12 พ.ค. 2570</span>
+                      </div>
+                      <h4 class="text-title-sm font-title-sm text-primary font-semibold mt-0.5">แผนการตรวจสุขภาพประจำปี 2570 (Annual Health Checkup) ณ Training Room</h4>
+                      <p class="text-body-sm font-body-sm text-on-surface-variant">กำหนดการหน่วยแพทย์เคลื่อนที่ รพ.พญาไทศรีราชา ณ บ่อวิน วันที่ 28-30 พฤษภาคม ตรวจสอบรอบคิวของแผนกตนเองได้แล้ว</p>
+                    </div>
+                  </div>
+                  <button class="shrink-0 px-3 py-1.5 text-secondary border border-secondary rounded font-label-sm hover:bg-surface-container-lowest transition-colors">
+                    ลงทะเบียนคิว
+                  </button>
+                </div>
+
+                <!-- Item 3: Japanese HQ Connection -->
+                <div class="p-3.5 rounded-lg border border-outline-variant/70 hover:border-secondary hover:bg-surface-container-low transition-all duration-150 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                  <div class="flex items-start gap-3">
+                    <div class="w-10 h-10 rounded bg-surface-container text-primary flex items-center justify-center shrink-0 mt-0.5 border border-outline-variant">
+                      <span class="material-symbols-outlined text-[20px]">public</span>
+                    </div>
+                    <div>
+                      <div class="flex items-center gap-2">
+                        <span class="px-2 py-0.2 rounded text-label-sm font-label-sm bg-surface-container-high text-on-surface-variant">Owari Seiki Japan</span>
+                        <span class="text-label-sm font-label-sm text-outline">10 พ.ค. 2570</span>
+                      </div>
+                      <h4 class="text-title-sm font-title-sm text-primary font-semibold mt-0.5">สารแสดงความยินดีจากสำนักงานใหญ่ประเทศญี่ปุ่น: ก้าวสู่มาตรฐานการผลิต Zero Defect สากล</h4>
+                      <p class="text-body-sm font-body-sm text-on-surface-variant">แลกเปลี่ยนองค์ความรู้ด้านเทคโนโลยี Precision Automotive Parts ประจำไตรมาส 2</p>
+                    </div>
+                  </div>
+                  <button class="shrink-0 px-3 py-1.5 text-secondary border border-secondary rounded font-label-sm hover:bg-surface-container-lowest transition-colors">
+                    ดูเอกสาร
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Global Network & Corporate Presentation Banner -->
+            <div class="bg-surface-container-lowest rounded-lg border border-outline-variant p-6 shadow-xs space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-secondary text-[20px]">hub</span>
+                  <h3 class="text-title-md font-title-md text-primary font-bold">เครือข่ายความร่วมมือระดับสากล (Owari Seiki Global Network)</h3>
+                </div>
+                <span class="text-label-sm font-label-sm text-outline">Precision Parts Manufacturing</span>
+              </div>
+              <div class="relative rounded-lg overflow-hidden border border-outline-variant bg-surface-container">
+                <img alt="Owari Seiki Global Corporate Network Slide" class="w-full h-auto object-cover max-h-[340px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBen4NwF9ljFuWu893bosT5kcBOVpP_MD2h16itxtrolntLAOQby8HAZ_vC-jdOugtQsElfnJN3DmYU5lmNktGbyLl_WJIODtt5ml7lGejcdLDsXDCP7FIiKC9Ufa7hkx78gU9lgzFRpVBHm_qU2rBipfow3nX8bNxSR_J-Jx-aIMYCoFZ_Y-0jZv_oHhqn6jMR5DbMzotj7LgHu4yG0lm988l9oUuVAfDvMkFNjAqLv_QGEPwE-xRKiiHSkTECBLItBnc"/>
+                <div class="p-3 bg-surface-container-lowest border-t border-outline-variant flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+                  <div class="flex items-center gap-2 text-body-sm font-body-sm text-on-surface-variant">
+                    <span class="material-symbols-outlined text-secondary text-[18px]">domain</span>
+                    <span>เชื่อมโยงระบบบริหารงานบุคคลและมาตรฐานวิศวกรรมยานยนต์ร่วมกับ Owari Seiki Co., Ltd. (Japan)</span>
+                  </div>
+                  <a class="text-label-sm font-label-sm text-secondary hover:underline font-semibold flex items-center shrink-0" href="#">
+                    <span>รายละเอียดเครือข่าย</span>
+                    <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column (4 cols): HR Helpline, First Aid, Cutoff Date & Quick Forms -->
+          <div class="lg:col-span-4 space-y-6">
+            
+            <!-- Quick HR Helpline & Emergency Contact -->
+            <div class="bg-surface-container-lowest rounded-lg border border-outline-variant p-5 shadow-xs space-y-4">
+              <div class="flex items-center gap-2 border-b border-outline-variant/60 pb-3">
+                <span class="material-symbols-outlined text-secondary text-[20px]">contact_phone</span>
+                <h3 class="text-title-md font-title-md text-primary font-bold">บริการช่วยเหลือและติดต่อด่วน (HR Support)</h3>
+              </div>
+
+              <div class="space-y-3">
+                <!-- HR Helpline -->
+                <div class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low border border-outline-variant/50">
+                  <div class="w-8 h-8 rounded bg-primary-container text-white flex items-center justify-center shrink-0 mt-0.5">
+                    <span class="material-symbols-outlined text-[18px]">support_agent</span>
+                  </div>
+                  <div class="space-y-0.5">
+                    <span class="text-label-sm font-label-sm text-outline uppercase font-semibold">HR HELPLINE (ฝ่ายบุคคล)</span>
+                    <div class="text-title-sm font-title-sm text-primary font-bold">033-017-511-19 ต่อ 108 - 157</div>
+                    <p class="text-body-sm font-body-sm text-on-surface-variant">สอบถามสิทธิสวัสดิการ, หนังสือรับรองเงินเดือน, กองทุนสำรองเลี้ยงชีพ</p>
+                  </div>
+                </div>
+
+                <!-- First Aid Room -->
+                <div class="flex items-start gap-3 p-3 rounded-lg bg-[#ECFDF5] border border-[#A7F3D0]">
+                  <div class="w-8 h-8 rounded bg-[#047857] text-white flex items-center justify-center shrink-0 mt-0.5">
+                    <span class="material-symbols-outlined text-[18px]">emergency</span>
+                  </div>
+                  <div class="space-y-0.5">
+                    <span class="text-label-sm font-label-sm text-[#047857] uppercase font-semibold">ห้องพยาบาล (24 HOURS)</span>
+                    <div class="text-title-sm font-title-sm text-primary font-bold">สายด่วนพยาบาล: ต่อ 155 / 123 </div>
+                    <p class="text-body-sm font-body-sm text-[#065f46]">จป.วิชาชีพประจำการกะกลางวัน และ หัวหน้ากะ พร้อมส่งต่อ รพ.คู่สัญญา</p>
+                  </div>
+                </div>
+
+                <!-- Monthly Payroll Cutoff Notice -->
+                <div class="p-3 rounded-lg bg-[#FFFBEB] border border-[#FDE68A] space-y-1">
+                  <div class="flex items-center gap-1.5 text-[#B45309] font-label-sm text-label-sm font-bold">
+                    <span class="material-symbols-outlined text-[16px]">event_busy</span>
+                    <span>กำหนดการตัดรอบส่งเอกสารเบิกจ่าย</span>
+                  </div>
+                  <p class="text-body-sm font-body-sm text-on-surface">
+                    <span class="font-semibold text-primary">วันที่ 20 ของทุกเดือน</span> ก่อนเวลา 17:00 น. เพื่อทำการเบิกจ่ายพร้อมรอบเงินเดือนงวดสิ้นเดือนนี้
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Downloadable Forms & Corporate Guidelines -->
+            <div class="bg-surface-container-lowest rounded-lg border border-outline-variant p-5 shadow-xs space-y-3">
+              <div class="flex items-center justify-between border-b border-outline-variant/60 pb-2">
+                <span class="text-title-sm font-title-sm text-primary font-semibold">แบบฟอร์มสวัสดิการยอดนิยม</span>
+                <span class="material-symbols-outlined text-outline text-[18px]">description</span>
+              </div>
+              <div class="space-y-2">
+                <a class="flex items-center justify-between p-2 rounded hover:bg-surface-container-low text-body-sm font-body-sm text-on-surface-variant hover:text-primary transition-colors border border-transparent hover:border-outline-variant" href="#">
+                  <div class="flex items-center gap-2 truncate">
+                    <span class="material-symbols-outlined text-secondary text-[18px]">picture_as_pdf</span>
+                    <span class="truncate">ใบรับรองแพทย์เบิกค่ารักษา (OPD_Claim.pdf)</span>
+                  </div>
+                  <span class="material-symbols-outlined text-outline text-[16px]">download</span>
+                </a>
+                <a class="flex items-center justify-between p-2 rounded hover:bg-surface-container-low text-body-sm font-body-sm text-on-surface-variant hover:text-primary transition-colors border border-transparent hover:border-outline-variant" href="#">
+                  <div class="flex items-center gap-2 truncate">
+                    <span class="material-symbols-outlined text-secondary text-[18px]">picture_as_pdf</span>
+                    <span class="truncate">คำขอเบิกสิทธิทำฟันและทันตกรรม (Dental_Form.pdf)</span>
+                  </div>
+                  <span class="material-symbols-outlined text-outline text-[16px]">download</span>
+                </a>
+                <a class="flex items-center justify-between p-2 rounded hover:bg-surface-container-low text-body-sm font-body-sm text-on-surface-variant hover:text-primary transition-colors border border-transparent hover:border-outline-variant" href="#">
+                  <div class="flex items-center gap-2 truncate">
+                    <span class="material-symbols-outlined text-secondary text-[18px]">picture_as_pdf</span>
+                    <span class="truncate">คู่มือนโยบายสวัสดิการพนักงาน 2570 (Handbook.pdf)</span>
+                  </div>
+                  <span class="material-symbols-outlined text-outline text-[16px]">download</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Working Calendar Mini Widget -->
+            <div class="bg-surface-container-lowest rounded-lg border border-outline-variant p-5 shadow-xs space-y-3">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-secondary text-[18px]">date_range</span>
+                  <span class="text-title-sm font-title-sm text-primary font-semibold">วันหยุดตามประเพณีถัดไป</span>
+                </div>
+                <span class="text-label-sm font-label-sm text-secondary font-medium">พฤษภาคม  2570 </spam>             </div>
+              <div class="p-3 rounded-lg bg-surface-container border border-outline-variant/50 flex items-center gap-3">
+                <div class="text-center px-2 py-1 bg-surface-container-lowest rounded border border-outline-variant min-w-[48px]">
+                  <span class="block text-label-sm font-label-sm text-error uppercase font-bold">พ.ค.</span>
+                  <span class="block text-title-lg font-title-lg text-primary font-bold leading-none">22</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-title-sm font-title-sm text-primary font-semibold">วันวิสาขบูชา (Visakha Bucha Day)</span>
+                  <span class="text-label-sm font-label-sm text-outline">วันหยุดประจำโรงงาน ปิดทำการ 1 วัน</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SITE FOOTER -->
+        <footer class="mt-8 pt-6 border-t border-outline-variant/60 flex flex-col sm:flex-row items-center justify-between gap-3 text-label-sm font-label-sm text-outline">
+          <div>
+            © 2027 Owari Seiki (Thailand) Co., Ltd. All rights reserved. Eastern Seaboard Rayong Industrial Estate.
+          </div>
+          <div class="flex items-center gap-4">
+            <a class="hover:underline" href="#">Privacy Policy (นโยบายคุ้มครองข้อมูลส่วนบุคคล)</a>
+            <span>•</span>
+            <a class="hover:underline" href="#">HR IT Security &amp; Ethics Guideline</a>
+            <span>•</span>
+            <span>Version 3.4.2</span>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>
